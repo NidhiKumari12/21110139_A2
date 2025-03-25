@@ -1,0 +1,404 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T19:05:53Z",
+  "metrics": {
+    "./src/memray/commands/attach.py": {
+      "CONFIDENCE.HIGH": 5,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 5,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 417,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/integration/test_attach.py": {
+      "CONFIDENCE.HIGH": 12,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 12,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 148,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 17,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 17,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 565,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "11 import socket\n12 import subprocess\n13 import sys\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./src/memray/commands/attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 12,
+      "line_range": [
+        12
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "133     injecter = pathlib.Path(memray.__file__).parent / \"_inject.abi3.so\"\n134     assert injecter.exists()\n135 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./src/memray/commands/attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 134,
+      "line_range": [
+        134
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "175     try:\n176         output = subprocess.check_output(cmd, text=True, stderr=subprocess.STDOUT)\n177         returncode = 0\n",
+      "col_offset": 17,
+      "end_col_offset": 82,
+      "filename": "./src/memray/commands/attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 176,
+      "line_range": [
+        176
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "247     try:\n248         help_str = subprocess.check_output(\n249             [\"lldb\", \"--help\"],\n250             text=True,\n251             stderr=subprocess.STDOUT,\n252         )\n253     except FileNotFoundError:\n",
+      "col_offset": 19,
+      "end_col_offset": 9,
+      "filename": "./src/memray/commands/attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 248,
+      "line_range": [
+        248,
+        249,
+        250,
+        251,
+        252
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "247     try:\n248         help_str = subprocess.check_output(\n249             [\"lldb\", \"--help\"],\n250             text=True,\n251             stderr=subprocess.STDOUT,\n252         )\n253     except FileNotFoundError:\n",
+      "col_offset": 19,
+      "end_col_offset": 9,
+      "filename": "./src/memray/commands/attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 248,
+      "line_range": [
+        248,
+        249,
+        250,
+        251,
+        252
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "1 import subprocess\n2 import sys\n3 \n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 1,
+      "line_range": [
+        1
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "93     process_stderr = \"\"\n94     tracked_process = subprocess.Popen(\n95         [sys.executable, \"-uc\", PROGRAM],\n96         stdin=subprocess.PIPE,\n97         stdout=subprocess.PIPE,\n98         stderr=subprocess.PIPE,\n99         text=True,\n100     )\n101 \n",
+      "col_offset": 22,
+      "end_col_offset": 5,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 94,
+      "line_range": [
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "102     # Help the type checker out...\n103     assert tracked_process.stdin is not None\n104     assert tracked_process.stdout is not None\n",
+      "col_offset": 4,
+      "end_col_offset": 44,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 103,
+      "line_range": [
+        103
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "103     assert tracked_process.stdin is not None\n104     assert tracked_process.stdout is not None\n105 \n",
+      "col_offset": 4,
+      "end_col_offset": 45,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 104,
+      "line_range": [
+        104
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "105 \n106     assert tracked_process.stdout.readline() == \"ready\\n\"\n107 \n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 106,
+      "line_range": [
+        106
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "111     try:\n112         subprocess.check_output(cmd, stderr=subprocess.STDOUT, text=True)\n113     except subprocess.CalledProcessError as exc:\n",
+      "col_offset": 8,
+      "end_col_offset": 73,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 112,
+      "line_range": [
+        112
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "132     # THEN\n133     assert \"\" == tracked_process.stdout.read()\n134     assert tracked_process.returncode == 0\n",
+      "col_offset": 4,
+      "end_col_offset": 46,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 133,
+      "line_range": [
+        133
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "133     assert \"\" == tracked_process.stdout.read()\n134     assert tracked_process.returncode == 0\n135     return process_stderr\n",
+      "col_offset": 4,
+      "end_col_offset": 42,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 134,
+      "line_range": [
+        134
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "164     (valloc,) = get_relevant_vallocs(reader.get_allocation_records())\n165     assert get_call_stack(valloc) == [\"valloc\", \"baz\", \"bar\", \"foo\", \"<module>\"]\n166 \n",
+      "col_offset": 4,
+      "end_col_offset": 80,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 165,
+      "line_range": [
+        165
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "188     (valloc,) = get_relevant_vallocs(reader.get_high_watermark_allocation_records())\n189     assert get_call_stack(valloc) == [\"valloc\", \"baz\", \"bar\", \"foo\", \"<module>\"]\n190 \n",
+      "col_offset": 4,
+      "end_col_offset": 80,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 189,
+      "line_range": [
+        189
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "204     # THEN\n205     assert \"memray: Deactivating tracking: 1 seconds have elapsed\" in process_stderr\n206 \n",
+      "col_offset": 4,
+      "end_col_offset": 84,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 205,
+      "line_range": [
+        205
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "220     # THEN\n221     assert (\n222         \"Failed to stop tracking in remote process:\"\n223         \" no previous `memray attach` call detected\"\n224     ) in exc_info.value.stdout\n",
+      "col_offset": 4,
+      "end_col_offset": 30,
+      "filename": "./tests/integration/test_attach.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 221,
+      "line_range": [
+        221,
+        222,
+        223,
+        224
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

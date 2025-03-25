@@ -1,0 +1,100 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T19:05:39Z",
+  "metrics": {
+    "./src/memray/reporters/_textual_hacks.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 25,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./src/memray/reporters/tree.py": {
+      "CONFIDENCE.HIGH": 1,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 415,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./src/memray/reporters/tui.py": {
+      "CONFIDENCE.HIGH": 1,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 668,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1108,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "329                 if not tree.allow_expand:\n330                     assert tree.data is not None\n331                     tree.label = self.frame_text(tree.data, allow_expand=True)\n",
+      "col_offset": 20,
+      "end_col_offset": 48,
+      "filename": "./src/memray/reporters/tree.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 330,
+      "line_range": [
+        330
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "799         \"\"\"Method called to process each fetched snapshot.\"\"\"\n800         assert self.tui is not None\n801         with self.batch_update():\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./src/memray/reporters/tui.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 800,
+      "line_range": [
+        800
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

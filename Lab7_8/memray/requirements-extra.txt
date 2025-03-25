@@ -1,0 +1,5 @@
+mypy
+bump2version
+towncrier
+pre-commit
+-r requirements-docs.txt

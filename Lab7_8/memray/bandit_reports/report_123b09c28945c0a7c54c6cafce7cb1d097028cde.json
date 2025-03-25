@@ -1,0 +1,99 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T19:05:42Z",
+  "metrics": {
+    "./src/memray/commands/run.py": {
+      "CONFIDENCE.HIGH": 3,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 305,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 3,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 305,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "7 import socket\n8 import subprocess\n9 import sys\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./src/memray/commands/run.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 8,
+      "line_range": [
+        8
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "69                 sys.argv = [\"-c\", *args.script_args]\n70                 exec(args.script, {\"__name__\": \"__main__\"})\n71             else:\n",
+      "col_offset": 16,
+      "end_col_offset": 59,
+      "filename": "./src/memray/commands/run.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Use of exec detected.",
+      "line_number": 70,
+      "line_range": [
+        70
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b102_exec_used.html",
+      "test_id": "B102",
+      "test_name": "exec_used"
+    },
+    {
+      "code": "124     with contextlib.suppress(KeyboardInterrupt):\n125         with subprocess.Popen(\n126             tracked_app_cmd,\n127             stderr=subprocess.PIPE,\n128             stdout=subprocess.DEVNULL,\n129             text=True,\n130         ) as process:\n131             try:\n",
+      "col_offset": 13,
+      "end_col_offset": 9,
+      "filename": "./src/memray/commands/run.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 125,
+      "line_range": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    }
+  ]
+}

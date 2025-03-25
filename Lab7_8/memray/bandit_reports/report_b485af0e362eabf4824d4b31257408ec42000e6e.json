@@ -1,0 +1,567 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T19:05:45Z",
+  "metrics": {
+    "./src/memray/_ipython/flamegraph.py": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 210,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/integration/test_ipython.py": {
+      "CONFIDENCE.HIGH": 24,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 24,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 126,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 26,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 26,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 336,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "217 \n218         assert reporter is not None\n219         flamegraph_path = Path(tempdir) / \"flamegraph.html\"\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./src/memray/_ipython/flamegraph.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 218,
+      "line_range": [
+        218
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "232 \n233 assert FlamegraphMagics.memray_flamegraph.__doc__ is not None\n234 FlamegraphMagics.memray_flamegraph.__doc__ += \"\\n\\n\" + argument_parser().format_help()\n",
+      "col_offset": 0,
+      "end_col_offset": 61,
+      "filename": "./src/memray/_ipython/flamegraph.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 233,
+      "line_range": [
+        233
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "47 \n48         assert html is not None\n49         assert \"<iframe\" in html\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 48,
+      "line_range": [
+        48
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "48         assert html is not None\n49         assert \"<iframe\" in html\n50         assert \"flamegraph.html\" in html\n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 49,
+      "line_range": [
+        49
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "49         assert \"<iframe\" in html\n50         assert \"flamegraph.html\" in html\n51 \n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 50,
+      "line_range": [
+        50
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "71 \n72         assert html is not None\n73         assert \"<iframe\" in html\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 72,
+      "line_range": [
+        72
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "72         assert html is not None\n73         assert \"<iframe\" in html\n74         assert \"flamegraph.html\" in html\n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 73,
+      "line_range": [
+        73
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "73         assert \"<iframe\" in html\n74         assert \"flamegraph.html\" in html\n75 \n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 74,
+      "line_range": [
+        74
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "91 \n92         assert html is None\n93         stdout, stderr = capsys.readouterr()\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 92,
+      "line_range": [
+        92
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "93         stdout, stderr = capsys.readouterr()\n94         assert \"show this help message\" in stdout\n95         assert \"\" == stderr\n",
+      "col_offset": 8,
+      "end_col_offset": 49,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 94,
+      "line_range": [
+        94
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "94         assert \"show this help message\" in stdout\n95         assert \"\" == stderr\n96 \n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 95,
+      "line_range": [
+        95
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "112 \n113         assert html is None\n114         stdout, stderr = capsys.readouterr()\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 113,
+      "line_range": [
+        113
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "114         stdout, stderr = capsys.readouterr()\n115         assert \"\" == stdout\n116         assert \"usage:\" in stderr\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 115,
+      "line_range": [
+        115
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "115         assert \"\" == stdout\n116         assert \"usage:\" in stderr\n117 \n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 116,
+      "line_range": [
+        116
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "134 \n135         assert html is not None\n136         stdout, _ = capsys.readouterr()\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 135,
+      "line_range": [
+        135
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "136         stdout, _ = capsys.readouterr()\n137         assert \"<iframe\" in html\n138         assert \"flamegraph.html\" in html\n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 137,
+      "line_range": [
+        137
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "137         assert \"<iframe\" in html\n138         assert \"flamegraph.html\" in html\n139         assert \"Results saved to\" in stdout\n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 138,
+      "line_range": [
+        138
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "138         assert \"flamegraph.html\" in html\n139         assert \"Results saved to\" in stdout\n140 \n",
+      "col_offset": 8,
+      "end_col_offset": 43,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 139,
+      "line_range": [
+        139
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "163         # THEN\n164         assert html is not None\n165         stdout, _ = capsys.readouterr()\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 164,
+      "line_range": [
+        164
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "165         stdout, _ = capsys.readouterr()\n166         assert \"<iframe\" in html\n167         assert \"flamegraph.html\" in html\n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 166,
+      "line_range": [
+        166
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "166         assert \"<iframe\" in html\n167         assert \"flamegraph.html\" in html\n168         assert \"Results saved to\" in stdout\n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 167,
+      "line_range": [
+        167
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "167         assert \"flamegraph.html\" in html\n168         assert \"Results saved to\" in stdout\n169 \n",
+      "col_offset": 8,
+      "end_col_offset": 43,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 168,
+      "line_range": [
+        168
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "170         title_tag = f\"<title>memray - {title}</title>\"\n171         assert title_tag in next(tmpdir.visit(\"**/flamegraph.html\")).read()\n172 \n",
+      "col_offset": 8,
+      "end_col_offset": 75,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 171,
+      "line_range": [
+        171
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "185         # THEN\n186         assert html is None\n187         stdout, stderr = capsys.readouterr()\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 186,
+      "line_range": [
+        186
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "187         stdout, stderr = capsys.readouterr()\n188         assert \"\" == stdout\n189         assert \"Can't create a temporal flame graph of temporary allocations\" in stderr\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 188,
+      "line_range": [
+        188
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "188         assert \"\" == stdout\n189         assert \"Can't create a temporal flame graph of temporary allocations\" in stderr\n",
+      "col_offset": 8,
+      "end_col_offset": 87,
+      "filename": "./tests/integration/test_ipython.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 189,
+      "line_range": [
+        189
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

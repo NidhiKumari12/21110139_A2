@@ -1,0 +1,307 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T19:05:39Z",
+  "metrics": {
+    "./docs/tutorials/exercise_2/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./docs/tutorials/exercise_2/holding_onto_memory.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 25,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./docs/tutorials/solutions/exercise_2/holding_onto_memory.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 38,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./docs/tutorials/solutions/exercise_3/lru_cache.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 26,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./docs/tutorials/tests/test_exercise_1.py": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 4,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 38,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./docs/tutorials/tests/test_exercise_3.py": {
+      "CONFIDENCE.HIGH": 6,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 6,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 38,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 10,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 10,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 165,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "22     h = generate_fibonacci_hash(0, 0, 0)\n23     assert h == 0\n24 \n",
+      "col_offset": 4,
+      "end_col_offset": 17,
+      "filename": "./docs/tutorials/tests/test_exercise_1.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 23,
+      "line_range": [
+        23
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "35     h = generate_fibonacci_hash(0, 0, length)\n36     assert h == expected\n37 \n",
+      "col_offset": 4,
+      "end_col_offset": 24,
+      "filename": "./docs/tutorials/tests/test_exercise_1.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 36,
+      "line_range": [
+        36
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "48     h = generate_fibonacci_hash(length, length, length)\n49     assert h == expected * 3\n50 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./docs/tutorials/tests/test_exercise_1.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 49,
+      "line_range": [
+        49
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "55     h = generate_fibonacci_hash(0, 0, 19)\n56     assert h == 945  # 10945 % 10000\n",
+      "col_offset": 4,
+      "end_col_offset": 19,
+      "filename": "./docs/tutorials/tests/test_exercise_1.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 56,
+      "line_range": [
+        56
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "21     a = Algorithms(0)  # This is equivalent to the standard factorial function\n22     assert a.factorial_plus(value) == math.factorial(value)\n23 \n",
+      "col_offset": 4,
+      "end_col_offset": 59,
+      "filename": "./docs/tutorials/tests/test_exercise_3.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 22,
+      "line_range": [
+        22
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "28     # 3 * (2 * (1 + 5) + 5) + 5\n29     assert a.factorial_plus(3) == 56\n30 \n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./docs/tutorials/tests/test_exercise_3.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 29,
+      "line_range": [
+        29
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "31     # 4 * (3 * (2 * (1 + 5) + 5) + 5) + 5\n32     assert a.factorial_plus(4) == 229\n33 \n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./docs/tutorials/tests/test_exercise_3.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 32,
+      "line_range": [
+        32
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "36     values = list(generate_factorial_plus_last_digit(1, 6))\n37     assert values == [1, 1, 2, 6, 4, 0]  # last digits of 1 1 2 6 24 120, i.e. 0! to 5!\n38 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./docs/tutorials/tests/test_exercise_3.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 37,
+      "line_range": [
+        37
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "41     values = list(generate_factorial_plus_last_digit(5, 1))\n42     assert values == [\n43         1,\n44         2,\n45         3,\n46         4,\n47         5,\n48     ]  # last digits of the first fac_plus_n factorial of 0, which is always n+1\n49 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./docs/tutorials/tests/test_exercise_3.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 42,
+      "line_range": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "57     )  # fac_plus_1 values are [3, 3, 8, 26, 106]\n58     assert (\n59         values == expected\n60     )  # last digits of the first fac_plus(n) factorial of 0, which is always n+1\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./docs/tutorials/tests/test_exercise_3.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 58,
+      "line_range": [
+        58,
+        59,
+        60
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T19:05:30Z",
+  "metrics": {
+    "./setup.py": {
+      "CONFIDENCE.HIGH": 3,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 287,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 3,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 287,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "4 import pathlib\n5 import subprocess\n6 import sys\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 5,
+      "line_range": [
+        5
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "48         )\n49         subprocess.run(command, check=True, **kwargs)\n50 \n",
+      "col_offset": 8,
+      "end_col_offset": 53,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 49,
+      "line_range": [
+        49
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "296 with open(\"src/memray/_version.py\") as fp:\n297     exec(fp.read(), about)\n298 \n",
+      "col_offset": 4,
+      "end_col_offset": 26,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Use of exec detected.",
+      "line_number": 297,
+      "line_range": [
+        297
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b102_exec_used.html",
+      "test_id": "B102",
+      "test_name": "exec_used"
+    }
+  ]
+}

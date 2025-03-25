@@ -1,0 +1,927 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T19:05:29Z",
+  "metrics": {
+    "./setup.py": {
+      "CONFIDENCE.HIGH": 3,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 287,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/integration/test_greenlet.py": {
+      "CONFIDENCE.HIGH": 41,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 41,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 179,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 44,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 43,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 466,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "4 import pathlib\n5 import subprocess\n6 import sys\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 5,
+      "line_range": [
+        5
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "48         )\n49         subprocess.run(command, check=True, **kwargs)\n50 \n",
+      "col_offset": 8,
+      "end_col_offset": 53,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 49,
+      "line_range": [
+        49
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "296 with open(\"src/memray/_version.py\") as fp:\n297     exec(fp.read(), about)\n298 \n",
+      "col_offset": 4,
+      "end_col_offset": 26,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Use of exec detected.",
+      "line_number": 297,
+      "line_range": [
+        297
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b102_exec_used.html",
+      "test_id": "B102",
+      "test_name": "exec_used"
+    },
+    {
+      "code": "1 import subprocess\n2 import sys\n3 import textwrap\n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 1,
+      "line_range": [
+        1
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "69     # WHEN\n70     subprocess.run([sys.executable, \"-Xdev\", \"-c\", subprocess_code], timeout=5)\n71 \n",
+      "col_offset": 4,
+      "end_col_offset": 79,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 70,
+      "line_range": [
+        70
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "83 \n84     assert stack(vallocs[0]) == [\"valloc\", \"banana\", \"apple\"]\n85     assert vallocs[0].size == 10 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 61,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 84,
+      "line_range": [
+        84
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "84     assert stack(vallocs[0]) == [\"valloc\", \"banana\", \"apple\"]\n85     assert vallocs[0].size == 10 * 1024\n86 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 85,
+      "line_range": [
+        85
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "86 \n87     assert stack(vallocs[1]) == [\"valloc\", \"ant\"]\n88     assert vallocs[1].size == 20 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 87,
+      "line_range": [
+        87
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "87     assert stack(vallocs[1]) == [\"valloc\", \"ant\"]\n88     assert vallocs[1].size == 20 * 1024\n89 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 88,
+      "line_range": [
+        88
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "89 \n90     assert stack(vallocs[2]) == [\"valloc\", \"banana\", \"apple\"]\n91     assert vallocs[2].size == 30 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 61,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 90,
+      "line_range": [
+        90
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "90     assert stack(vallocs[2]) == [\"valloc\", \"banana\", \"apple\"]\n91     assert vallocs[2].size == 30 * 1024\n92 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 91,
+      "line_range": [
+        91
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "92 \n93     assert stack(vallocs[3]) == [\"valloc\", \"ant\"]\n94     assert vallocs[3].size == 40 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 93,
+      "line_range": [
+        93
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "93     assert stack(vallocs[3]) == [\"valloc\", \"ant\"]\n94     assert vallocs[3].size == 40 * 1024\n95 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 94,
+      "line_range": [
+        94
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "95 \n96     assert stack(vallocs[4]) == [\"valloc\", \"bat\", \"ant\"]\n97     assert vallocs[4].size == 50 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 96,
+      "line_range": [
+        96
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "96     assert stack(vallocs[4]) == [\"valloc\", \"bat\", \"ant\"]\n97     assert vallocs[4].size == 50 * 1024\n98 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 97,
+      "line_range": [
+        97
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "98 \n99     assert stack(vallocs[5]) == [\"valloc\", \"ant\"]\n100     assert vallocs[5].size == 60 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 99,
+      "line_range": [
+        99
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "99     assert stack(vallocs[5]) == [\"valloc\", \"ant\"]\n100     assert vallocs[5].size == 60 * 1024\n101 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 100,
+      "line_range": [
+        100
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "101 \n102     assert stack(vallocs[6]) == [\"valloc\", \"test\", \"<module>\"]\n103     assert vallocs[6].size == 70 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 102,
+      "line_range": [
+        102
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "102     assert stack(vallocs[6]) == [\"valloc\", \"test\", \"<module>\"]\n103     assert vallocs[6].size == 70 * 1024\n104 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 103,
+      "line_range": [
+        103
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "157     # WHEN\n158     subprocess.run([sys.executable, \"-Xdev\", \"-c\", subprocess_code], timeout=5)\n159 \n",
+      "col_offset": 4,
+      "end_col_offset": 79,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 158,
+      "line_range": [
+        158
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "171 \n172     assert stack(vallocs[0]) == [\"valloc\", \"banana\", \"apple\"]\n173     assert vallocs[0].size == 10 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 61,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 172,
+      "line_range": [
+        172
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "172     assert stack(vallocs[0]) == [\"valloc\", \"banana\", \"apple\"]\n173     assert vallocs[0].size == 10 * 1024\n174 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 173,
+      "line_range": [
+        173
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "174 \n175     assert stack(vallocs[1]) == [\"valloc\", \"ant\"]\n176     assert vallocs[1].size == 20 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 175,
+      "line_range": [
+        175
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "175     assert stack(vallocs[1]) == [\"valloc\", \"ant\"]\n176     assert vallocs[1].size == 20 * 1024\n177 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 176,
+      "line_range": [
+        176
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "177 \n178     assert stack(vallocs[2]) == [\"valloc\", \"banana\", \"apple\"]\n179     assert vallocs[2].size == 30 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 61,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 178,
+      "line_range": [
+        178
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "178     assert stack(vallocs[2]) == [\"valloc\", \"banana\", \"apple\"]\n179     assert vallocs[2].size == 30 * 1024\n180 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 179,
+      "line_range": [
+        179
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "180 \n181     assert stack(vallocs[3]) == [\"valloc\", \"ant\"]\n182     assert vallocs[3].size == 40 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 181,
+      "line_range": [
+        181
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "181     assert stack(vallocs[3]) == [\"valloc\", \"ant\"]\n182     assert vallocs[3].size == 40 * 1024\n183 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 182,
+      "line_range": [
+        182
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "183 \n184     assert stack(vallocs[4]) == [\"valloc\", \"bat\", \"ant\"]\n185     assert vallocs[4].size == 50 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 184,
+      "line_range": [
+        184
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "184     assert stack(vallocs[4]) == [\"valloc\", \"bat\", \"ant\"]\n185     assert vallocs[4].size == 50 * 1024\n186 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 185,
+      "line_range": [
+        185
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "186 \n187     assert stack(vallocs[5]) == [\"valloc\", \"ant\"]\n188     assert vallocs[5].size == 60 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 187,
+      "line_range": [
+        187
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "187     assert stack(vallocs[5]) == [\"valloc\", \"ant\"]\n188     assert vallocs[5].size == 60 * 1024\n189 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 188,
+      "line_range": [
+        188
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "189 \n190     assert stack(vallocs[6]) == [\"valloc\", \"test\", \"<module>\"]\n191     assert vallocs[6].size == 70 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 190,
+      "line_range": [
+        190
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "190     assert stack(vallocs[6]) == [\"valloc\", \"test\", \"<module>\"]\n191     assert vallocs[6].size == 70 * 1024\n192 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 191,
+      "line_range": [
+        191
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "193     # 0 and 2 are fruit, 1 and 3 and 4 and 5 are animal, 6 is main.\n194     assert vallocs[0].tid != vallocs[1].tid != vallocs[6].tid\n195     assert vallocs[0].tid == vallocs[2].tid\n",
+      "col_offset": 4,
+      "end_col_offset": 61,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 194,
+      "line_range": [
+        194
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "194     assert vallocs[0].tid != vallocs[1].tid != vallocs[6].tid\n195     assert vallocs[0].tid == vallocs[2].tid\n196     assert vallocs[1].tid == vallocs[3].tid == vallocs[4].tid == vallocs[5].tid\n",
+      "col_offset": 4,
+      "end_col_offset": 43,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 195,
+      "line_range": [
+        195
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "195     assert vallocs[0].tid == vallocs[2].tid\n196     assert vallocs[1].tid == vallocs[3].tid == vallocs[4].tid == vallocs[5].tid\n197 \n",
+      "col_offset": 4,
+      "end_col_offset": 79,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 196,
+      "line_range": [
+        196
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "238     # WHEN\n239     subprocess.run([sys.executable, \"-Xdev\", \"-c\", subprocess_code], timeout=5)\n240 \n",
+      "col_offset": 4,
+      "end_col_offset": 79,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 239,
+      "line_range": [
+        239
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "254     # because we remove the tracking function)\n255     assert len(vallocs) == 2\n256 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 255,
+      "line_range": [
+        255
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "256 \n257     assert stack(vallocs[0]) == []\n258     assert vallocs[0].size == 70 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 34,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 257,
+      "line_range": [
+        257
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "257     assert stack(vallocs[0]) == []\n258     assert vallocs[0].size == 70 * 1024\n259 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 258,
+      "line_range": [
+        258
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "259 \n260     assert stack(vallocs[1]) == []\n261     assert vallocs[1].size == 10 * 1024\n",
+      "col_offset": 4,
+      "end_col_offset": 34,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 260,
+      "line_range": [
+        260
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "260     assert stack(vallocs[1]) == []\n261     assert vallocs[1].size == 10 * 1024\n262 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 261,
+      "line_range": [
+        261
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "265     outer_tid = vallocs[1].tid  # outer greenlet\n266     assert main_tid == outer_tid\n",
+      "col_offset": 4,
+      "end_col_offset": 32,
+      "filename": "./tests/integration/test_greenlet.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 266,
+      "line_range": [
+        266
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

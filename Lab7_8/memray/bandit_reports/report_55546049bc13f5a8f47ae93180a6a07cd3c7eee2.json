@@ -1,0 +1,1793 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T19:05:50Z",
+  "metrics": {
+    "./tests/integration/test_tracing.py": {
+      "CONFIDENCE.HIGH": 86,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 86,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 740,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 86,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 86,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 740,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "54     allocs = [record for record in records if record.allocator == AllocatorType.VALLOC]\n55     assert len(allocs) == 1\n56     (alloc,) = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 55,
+      "line_range": [
+        55
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "57     traceback = list(alloc.stack_trace())\n58     assert traceback[-4:] == [\n59         (\"alloc_func3\", __file__, 20),\n60         (\"alloc_func2\", __file__, 29),\n61         (\"alloc_func1\", __file__, 36),\n62         (\"test_traceback\", __file__, 49),\n63     ]\n64     frees = [\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 58,
+      "line_range": [
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "68     ]\n69     assert len(frees) == 1\n70     (free,) = frees\n",
+      "col_offset": 4,
+      "end_col_offset": 26,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 69,
+      "line_range": [
+        69
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "88     allocs = [record for record in records if record.allocator == AllocatorType.VALLOC]\n89     assert len(allocs) == 1\n90     (alloc,) = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 89,
+      "line_range": [
+        89
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "91     traceback = list(alloc.stack_trace())\n92     assert traceback[-4:] == [\n93         (\"alloc_func3\", __file__, 20),\n94         (\"alloc_func2\", __file__, 29),\n95         (\"alloc_func1\", __file__, 36),\n96         (\"test_traceback_for_high_watermark\", __file__, 83),\n97     ]\n98 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 92,
+      "line_range": [
+        92,
+        93,
+        94,
+        95,
+        96,
+        97
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "121     alloc1, alloc2 = allocs\n122     assert traceback2 == list(alloc2.stack_trace())\n123     assert traceback1 == list(alloc1.stack_trace())\n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 122,
+      "line_range": [
+        122
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "122     assert traceback2 == list(alloc2.stack_trace())\n123     assert traceback1 == list(alloc1.stack_trace())\n124 \n",
+      "col_offset": 4,
+      "end_col_offset": 51,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 123,
+      "line_range": [
+        123
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "140     allocs = [record for record in records if record.allocator == AllocatorType.VALLOC]\n141     assert len(allocs) == 2\n142     alloc1, alloc2 = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 141,
+      "line_range": [
+        141
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "144     traceback = list(alloc1.stack_trace())\n145     assert traceback == [\n146         (\"valloc\", sys.modules[\"memray._test\"].__file__, 44),\n147         (\"test_cython_traceback\", __file__, 134),\n148     ]\n149 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 145,
+      "line_range": [
+        145,
+        146,
+        147,
+        148
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "150     traceback = list(alloc2.stack_trace())\n151     assert traceback == [\n152         (\"test_cython_traceback\", __file__, 134),\n153     ]\n154 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 151,
+      "line_range": [
+        151,
+        152,
+        153
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "159     ]\n160     assert len(frees) == 1\n161     (free,) = frees\n",
+      "col_offset": 4,
+      "end_col_offset": 26,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 160,
+      "line_range": [
+        160
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "193     ]\n194     assert len(allocs) == 1\n195     (alloc,) = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 194,
+      "line_range": [
+        194
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "196     traceback = list(alloc.stack_trace())\n197     assert len(traceback) == 21\n198 \n",
+      "col_offset": 4,
+      "end_col_offset": 31,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 197,
+      "line_range": [
+        197
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "203     ]\n204     assert len(allocs) == 1\n205     (alloc,) = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 204,
+      "line_range": [
+        204
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "206     traceback = list(alloc.stack_trace())\n207     assert len(traceback) == 1\n208 \n",
+      "col_offset": 4,
+      "end_col_offset": 30,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 207,
+      "line_range": [
+        207
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "225 \n226     assert records1 == records2\n227 \n",
+      "col_offset": 4,
+      "end_col_offset": 31,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 226,
+      "line_range": [
+        226
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "244 \n245     assert records1 == records2\n246 \n",
+      "col_offset": 4,
+      "end_col_offset": 31,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 245,
+      "line_range": [
+        245
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "264     traceback2 = list(alloc.stack_trace())\n265     assert traceback1 == traceback2\n266 \n",
+      "col_offset": 4,
+      "end_col_offset": 35,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 265,
+      "line_range": [
+        265
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "287 \n288     assert traceback1 == traceback2\n289 \n",
+      "col_offset": 4,
+      "end_col_offset": 35,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 288,
+      "line_range": [
+        288
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "302     with Tracker(output):\n303         assert sys.getprofile() != profilefunc\n304 \n",
+      "col_offset": 8,
+      "end_col_offset": 46,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 303,
+      "line_range": [
+        303
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "305     # THEN\n306     assert sys.getprofile() == profilefunc\n307 \n",
+      "col_offset": 4,
+      "end_col_offset": 42,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 306,
+      "line_range": [
+        306
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "326     allocs = [record for record in records if record.allocator == AllocatorType.VALLOC]\n327     assert len(allocs) == 1\n328     (alloc,) = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 327,
+      "line_range": [
+        327
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "329     traceback = [frame[0] for frame in alloc.stack_trace()]\n330     assert traceback[-4:] == [\n331         \"valloc\",\n332         \"foo\",\n333         \"test_initial_tracking_frames_are_correctly_populated\",\n334     ]\n335 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 330,
+      "line_range": [
+        330,
+        331,
+        332,
+        333,
+        334
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "365     allocs = [record for record in records if record.allocator == AllocatorType.VALLOC]\n366     assert len(allocs) == 1\n367     (alloc,) = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 366,
+      "line_range": [
+        366
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "368     traceback = [frame[0] for frame in alloc.stack_trace()]\n369     assert traceback[-5:] == [\n370         \"valloc\",\n371         \"foo\",\n372         \"bar\",\n373         \"test_restart_tracing_function_gets_correctly_the_frames\",\n374     ]\n375 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 369,
+      "line_range": [
+        369,
+        370,
+        371,
+        372,
+        373,
+        374
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "390     n_records = len(list(reader.get_allocation_records()))\n391     assert n_records == reader.metadata.total_allocations\n392 \n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 391,
+      "line_range": [
+        391
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "414 \n415     assert len(allocs) == 2\n416     alloc1, alloc2 = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 415,
+      "line_range": [
+        415
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "418     func2, file2, line2 = alloc2.stack_trace()[0]\n419     assert func1 == \"test_allocations_in_root_frame_have_correct_line_number\"\n420     assert func2 == \"test_allocations_in_root_frame_have_correct_line_number\"\n",
+      "col_offset": 4,
+      "end_col_offset": 77,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 419,
+      "line_range": [
+        419
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "419     assert func1 == \"test_allocations_in_root_frame_have_correct_line_number\"\n420     assert func2 == \"test_allocations_in_root_frame_have_correct_line_number\"\n421     assert file1 == __file__\n",
+      "col_offset": 4,
+      "end_col_offset": 77,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 420,
+      "line_range": [
+        420
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "420     assert func2 == \"test_allocations_in_root_frame_have_correct_line_number\"\n421     assert file1 == __file__\n422     assert file2 == __file__\n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 421,
+      "line_range": [
+        421
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "421     assert file1 == __file__\n422     assert file2 == __file__\n423     assert abs(line1 - line2) == 1\n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 422,
+      "line_range": [
+        422
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "422     assert file2 == __file__\n423     assert abs(line1 - line2) == 1\n424 \n",
+      "col_offset": 4,
+      "end_col_offset": 34,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 423,
+      "line_range": [
+        423
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "442 \n443     assert len(allocs) == 4\n444     first_alloc1, first_alloc2, second_alloc1, second_alloc2 = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 443,
+      "line_range": [
+        443
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "445 \n446     assert first_alloc1.stack_id == second_alloc1.stack_id\n447     assert first_alloc1.stack_trace() == second_alloc1.stack_trace()\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 446,
+      "line_range": [
+        446
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "446     assert first_alloc1.stack_id == second_alloc1.stack_id\n447     assert first_alloc1.stack_trace() == second_alloc1.stack_trace()\n448     assert first_alloc2.stack_id == second_alloc2.stack_id\n",
+      "col_offset": 4,
+      "end_col_offset": 68,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 447,
+      "line_range": [
+        447
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "447     assert first_alloc1.stack_trace() == second_alloc1.stack_trace()\n448     assert first_alloc2.stack_id == second_alloc2.stack_id\n449     assert first_alloc2.stack_trace() == second_alloc2.stack_trace()\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 448,
+      "line_range": [
+        448
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "448     assert first_alloc2.stack_id == second_alloc2.stack_id\n449     assert first_alloc2.stack_trace() == second_alloc2.stack_trace()\n450 \n",
+      "col_offset": 4,
+      "end_col_offset": 68,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 449,
+      "line_range": [
+        449
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "450 \n451     assert first_alloc1.stack_id != first_alloc2.stack_id\n452     assert second_alloc1.stack_id != second_alloc2.stack_id\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 451,
+      "line_range": [
+        451
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "451     assert first_alloc1.stack_id != first_alloc2.stack_id\n452     assert second_alloc1.stack_id != second_alloc2.stack_id\n453 \n",
+      "col_offset": 4,
+      "end_col_offset": 59,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 452,
+      "line_range": [
+        452
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "473 \n474     assert len(allocs) == 4\n475     first_alloc1, first_alloc2, second_alloc1, second_alloc2 = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 474,
+      "line_range": [
+        474
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "476 \n477     assert first_alloc1.stack_id != second_alloc1.stack_id\n478     assert first_alloc1.stack_trace()[:-1] == second_alloc1.stack_trace()[:-1]\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 477,
+      "line_range": [
+        477
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "477     assert first_alloc1.stack_id != second_alloc1.stack_id\n478     assert first_alloc1.stack_trace()[:-1] == second_alloc1.stack_trace()[:-1]\n479     assert first_alloc1.stack_trace()[-1] != second_alloc1.stack_trace()[-1]\n",
+      "col_offset": 4,
+      "end_col_offset": 78,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 478,
+      "line_range": [
+        478
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "478     assert first_alloc1.stack_trace()[:-1] == second_alloc1.stack_trace()[:-1]\n479     assert first_alloc1.stack_trace()[-1] != second_alloc1.stack_trace()[-1]\n480     assert first_alloc2.stack_id != second_alloc2.stack_id\n",
+      "col_offset": 4,
+      "end_col_offset": 76,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 479,
+      "line_range": [
+        479
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "479     assert first_alloc1.stack_trace()[-1] != second_alloc1.stack_trace()[-1]\n480     assert first_alloc2.stack_id != second_alloc2.stack_id\n481     assert first_alloc2.stack_trace()[:-1] == second_alloc2.stack_trace()[:-1]\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 480,
+      "line_range": [
+        480
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "480     assert first_alloc2.stack_id != second_alloc2.stack_id\n481     assert first_alloc2.stack_trace()[:-1] == second_alloc2.stack_trace()[:-1]\n482     assert first_alloc2.stack_trace()[-1] != second_alloc2.stack_trace()[-1]\n",
+      "col_offset": 4,
+      "end_col_offset": 78,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 481,
+      "line_range": [
+        481
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "481     assert first_alloc2.stack_trace()[:-1] == second_alloc2.stack_trace()[:-1]\n482     assert first_alloc2.stack_trace()[-1] != second_alloc2.stack_trace()[-1]\n483 \n",
+      "col_offset": 4,
+      "end_col_offset": 76,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 482,
+      "line_range": [
+        482
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "483 \n484     assert first_alloc1.stack_id != first_alloc2.stack_id\n485     assert second_alloc1.stack_id != second_alloc2.stack_id\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 484,
+      "line_range": [
+        484
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "484     assert first_alloc1.stack_id != first_alloc2.stack_id\n485     assert second_alloc1.stack_id != second_alloc2.stack_id\n486 \n",
+      "col_offset": 4,
+      "end_col_offset": 59,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 485,
+      "line_range": [
+        485
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "510 \n511     assert len(allocs) == 4\n512     first_alloc1, first_alloc2, second_alloc1, second_alloc2 = allocs\n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 511,
+      "line_range": [
+        511
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "513 \n514     assert first_alloc1.stack_id != second_alloc1.stack_id\n515     assert first_alloc1.stack_trace() != second_alloc1.stack_trace()\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 514,
+      "line_range": [
+        514
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "514     assert first_alloc1.stack_id != second_alloc1.stack_id\n515     assert first_alloc1.stack_trace() != second_alloc1.stack_trace()\n516     assert first_alloc2.stack_id != second_alloc2.stack_id\n",
+      "col_offset": 4,
+      "end_col_offset": 68,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 515,
+      "line_range": [
+        515
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "515     assert first_alloc1.stack_trace() != second_alloc1.stack_trace()\n516     assert first_alloc2.stack_id != second_alloc2.stack_id\n517     assert first_alloc2.stack_trace() != second_alloc2.stack_trace()\n",
+      "col_offset": 4,
+      "end_col_offset": 58,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 516,
+      "line_range": [
+        516
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "516     assert first_alloc2.stack_id != second_alloc2.stack_id\n517     assert first_alloc2.stack_trace() != second_alloc2.stack_trace()\n518 \n",
+      "col_offset": 4,
+      "end_col_offset": 68,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 517,
+      "line_range": [
+        517
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "518 \n519     assert first_alloc1.stack_id != first_alloc2.stack_id\n520     assert second_alloc1.stack_id != second_alloc2.stack_id\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 519,
+      "line_range": [
+        519
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "519     assert first_alloc1.stack_id != first_alloc2.stack_id\n520     assert second_alloc1.stack_id != second_alloc2.stack_id\n521 \n",
+      "col_offset": 4,
+      "end_col_offset": 59,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 520,
+      "line_range": [
+        520
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "569     ]\n570     assert len(vallocs) == 1\n571 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 570,
+      "line_range": [
+        570
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "572     funcs = [frame[0] for frame in vallocs[0].stack_trace()]\n573     assert funcs == [\n574         \"valloc\",\n575         \"func1\",\n576         \"thread_body\",\n577         \"run\",\n578         \"_bootstrap_inner\",\n579         \"_bootstrap\",\n580     ]\n581 \n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 573,
+      "line_range": [
+        573,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        580
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "621     ]\n622     assert len(vallocs) == 2\n623 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 622,
+      "line_range": [
+        622
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "626     expected = [\"thread_body\", \"run\", \"_bootstrap_inner\", \"_bootstrap\"]\n627     assert funcs1 == funcs2 == expected\n628 \n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 627,
+      "line_range": [
+        627
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "672     ]\n673     assert len(tracker1_vallocs) == len(tracker2_vallocs) == 1\n674     assert tracker1_vallocs[0].stack_trace() != tracker2_vallocs[0].stack_trace()\n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 673,
+      "line_range": [
+        673
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "673     assert len(tracker1_vallocs) == len(tracker2_vallocs) == 1\n674     assert tracker1_vallocs[0].stack_trace() != tracker2_vallocs[0].stack_trace()\n675 \n",
+      "col_offset": 4,
+      "end_col_offset": 81,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 674,
+      "line_range": [
+        674
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "751     ]\n752     assert len(tracker1_vallocs) == len(tracker2_vallocs) == 1\n753 \n",
+      "col_offset": 4,
+      "end_col_offset": 62,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 752,
+      "line_range": [
+        752
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "757     common_frames = [\"thread_body\", \"run\", \"_bootstrap_inner\", \"_bootstrap\"]\n758     assert tracker1_funcs == [\"valloc\", \"func1\"] + common_frames\n759     assert tracker2_funcs == [\"valloc\", \"func2\"] + common_frames\n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 758,
+      "line_range": [
+        758
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "758     assert tracker1_funcs == [\"valloc\", \"func1\"] + common_frames\n759     assert tracker2_funcs == [\"valloc\", \"func2\"] + common_frames\n760 \n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 759,
+      "line_range": [
+        759
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "815     ]\n816     assert len(vallocs) == 2\n817 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 816,
+      "line_range": [
+        816
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "822     # Cython frames called before tracking started aren't in the Python stack.\n823     assert alloc1_funcs[:3] == [\"valloc\", \"func1\", \"thread_body\"]\n824     assert alloc2_funcs[:2] == [\"valloc\", \"thread_body\"]\n",
+      "col_offset": 4,
+      "end_col_offset": 65,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 823,
+      "line_range": [
+        823
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "823     assert alloc1_funcs[:3] == [\"valloc\", \"func1\", \"thread_body\"]\n824     assert alloc2_funcs[:2] == [\"valloc\", \"thread_body\"]\n825 \n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 824,
+      "line_range": [
+        824
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "884     ]\n885     assert len(vallocs) == 2\n886 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 885,
+      "line_range": [
+        885
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "891     # Cython frames called before tracking started aren't in the Python stack.\n892     assert alloc1_funcs[:3] == [\"valloc\", \"func1\", \"thread_body\"]\n893 \n",
+      "col_offset": 4,
+      "end_col_offset": 65,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 892,
+      "line_range": [
+        892
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "895     # pushed. Ensure we handle these unexpected pops.\n896     assert alloc2_funcs[:2] == [\"valloc\", \"thread_body\"]\n897 \n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 896,
+      "line_range": [
+        896
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "926     ]\n927     assert len(vallocs) == 2\n928 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 927,
+      "line_range": [
+        927
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "932 \n933     assert alloc1_funcs == [\n934         \"valloc\",\n935         \"func\",\n936         \"test_allocation_after_unsetting_profile_function\",\n937     ]\n938     assert alloc2_funcs == []\n",
+      "col_offset": 4,
+      "end_col_offset": 5,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 933,
+      "line_range": [
+        933,
+        934,
+        935,
+        936,
+        937
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "937     ]\n938     assert alloc2_funcs == []\n939 \n",
+      "col_offset": 4,
+      "end_col_offset": 29,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 938,
+      "line_range": [
+        938
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "970     ]\n971     assert len(vallocs) == 2\n972 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 971,
+      "line_range": [
+        971
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "976 \n977     assert alloc1_funcs[:2] == [\"valloc\", \"func\"]\n978     assert alloc2_funcs == []\n",
+      "col_offset": 4,
+      "end_col_offset": 49,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 977,
+      "line_range": [
+        977
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "977     assert alloc1_funcs[:2] == [\"valloc\", \"func\"]\n978     assert alloc2_funcs == []\n979 \n",
+      "col_offset": 4,
+      "end_col_offset": 29,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 978,
+      "line_range": [
+        978
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "996 \n997         assert len(records) >= 2\n998 \n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 997,
+      "line_range": [
+        997
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1002         )\n1003         assert mmap_record is not None\n1004         assert \"allocating_function\" in {\n",
+      "col_offset": 8,
+      "end_col_offset": 38,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1003,
+      "line_range": [
+        1003
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1003         assert mmap_record is not None\n1004         assert \"allocating_function\" in {\n1005             element[0] for element in mmap_record.stack_trace()\n1006         }\n1007 \n",
+      "col_offset": 8,
+      "end_col_offset": 9,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1004,
+      "line_range": [
+        1004,
+        1005,
+        1006
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1011         )\n1012         assert munmap_record is not None\n1013         with pytest.raises(NotImplementedError):\n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1012,
+      "line_range": [
+        1012
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1034         # THEN\n1035         assert threading._profile_hook is None\n1036         assert profile_hook == custom_trace_fn\n",
+      "col_offset": 8,
+      "end_col_offset": 46,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1035,
+      "line_range": [
+        1035
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1035         assert threading._profile_hook is None\n1036         assert profile_hook == custom_trace_fn\n1037         records = list(FileReader(output).get_allocation_records())\n",
+      "col_offset": 8,
+      "end_col_offset": 46,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1036,
+      "line_range": [
+        1036
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1038 \n1039         assert len(records) >= 2\n1040 \n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1039,
+      "line_range": [
+        1039
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1048         )\n1049         assert mmap_record is not None\n1050         assert \"allocating_function\" in {\n",
+      "col_offset": 8,
+      "end_col_offset": 38,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1049,
+      "line_range": [
+        1049
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1049         assert mmap_record is not None\n1050         assert \"allocating_function\" in {\n1051             element[0] for element in mmap_record.stack_trace()\n1052         }\n1053 \n",
+      "col_offset": 8,
+      "end_col_offset": 9,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1050,
+      "line_range": [
+        1050,
+        1051,
+        1052
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1057         )\n1058         assert munmap_record is not None\n1059         with pytest.raises(NotImplementedError):\n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./tests/integration/test_tracing.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1058,
+      "line_range": [
+        1058
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}
