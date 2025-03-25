@@ -1,0 +1,312 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T18:57:27Z",
+  "metrics": {
+    "./sdk/python/packages/flet/src/flet/core/popup_menu_button.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 414,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sdk/python/packages/flet/src/flet/core/types.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 322,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sdk/python/packages/flet/tests/test_datatable.py": {
+      "CONFIDENCE.HIGH": 10,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 10,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 88,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 10,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 10,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 824,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "7     r = ft.DataTable(columns=[ft.DataColumn(label=ft.Text(\"Header\"))])\n8     assert isinstance(r, ft.Control)\n9     assert r._build_add_commands() == [\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 8,
+      "line_range": [
+        8
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "8     assert isinstance(r, ft.Control)\n9     assert r._build_add_commands() == [\n10         Command(indent=0, name=None, values=[\"datatable\"], attrs={}, commands=[]),\n11         Command(indent=2, name=None, values=[\"datacolumn\"], attrs={}, commands=[]),\n12         Command(\n13             indent=4,\n14             name=None,\n15             values=[\"text\"],\n16             attrs={\"n\": \"label\", \"value\": \"Header\"},\n17             commands=[],\n18         ),\n19     ], \"Test failed\"\n20 \n",
+      "col_offset": 4,
+      "end_col_offset": 20,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 9,
+      "line_range": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "23     r = ft.DataRow(cells=[ft.DataCell(content=ft.Text(\"Cell\"))])\n24     assert isinstance(r, ft.Control)\n25     assert r._build_add_commands() == [\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 24,
+      "line_range": [
+        24
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "24     assert isinstance(r, ft.Control)\n25     assert r._build_add_commands() == [\n26         Command(indent=0, name=None, values=[\"datarow\"], attrs={}, commands=[]),\n27         Command(indent=2, name=None, values=[\"datacell\"], attrs={}, commands=[]),\n28         Command(\n29             indent=4, name=None, values=[\"text\"], attrs={\"value\": \"Cell\"}, commands=[]\n30         ),\n31     ], \"Test failed\"\n32 \n",
+      "col_offset": 4,
+      "end_col_offset": 20,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 25,
+      "line_range": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "35     r = ft.DataRow(cells=[ft.DataCell(content=ft.Text(\"Cell\"))], color=\"yellow\")\n36     assert isinstance(r, ft.Control)\n37     assert r._build_add_commands() == [\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 36,
+      "line_range": [
+        36
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "36     assert isinstance(r, ft.Control)\n37     assert r._build_add_commands() == [\n38         Command(\n39             indent=0,\n40             name=None,\n41             values=[\"datarow\"],\n42             attrs={\"color\": '{\"default\":\"yellow\"}'},\n43             commands=[],\n44         ),\n45         Command(indent=2, name=None, values=[\"datacell\"], attrs={}, commands=[]),\n46         Command(\n47             indent=4, name=None, values=[\"text\"], attrs={\"value\": \"Cell\"}, commands=[]\n48         ),\n49     ], \"Test failed\"\n50 \n",
+      "col_offset": 4,
+      "end_col_offset": 20,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 37,
+      "line_range": [
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "60     )\n61     assert isinstance(r, ft.Control)\n62     assert r._build_add_commands() == [\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 61,
+      "line_range": [
+        61
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "61     assert isinstance(r, ft.Control)\n62     assert r._build_add_commands() == [\n63         Command(\n64             indent=0,\n65             name=None,\n66             values=[\"datarow\"],\n67             attrs={\"color\": '{\"selected\":\"red\",\"hovered\":\"blue\",\"default\":\"yellow\"}'},\n68             commands=[],\n69         ),\n70         Command(indent=2, name=None, values=[\"datacell\"], attrs={}, commands=[]),\n71         Command(\n72             indent=4, name=None, values=[\"text\"], attrs={\"value\": \"Cell\"}, commands=[]\n73         ),\n74     ], \"Test failed\"\n75 \n",
+      "col_offset": 4,
+      "end_col_offset": 20,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 62,
+      "line_range": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "85     )\n86     assert isinstance(r, ft.Control)\n87     assert r._build_add_commands() == [\n",
+      "col_offset": 4,
+      "end_col_offset": 36,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 86,
+      "line_range": [
+        86
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "86     assert isinstance(r, ft.Control)\n87     assert r._build_add_commands() == [\n88         Command(\n89             indent=0,\n90             name=None,\n91             values=[\"datarow\"],\n92             attrs={\"color\": '{\"selected\":\"red\",\"hovered\":\"blue\",\"default\":\"yellow\"}'},\n93             commands=[],\n94         ),\n95         Command(indent=2, name=None, values=[\"datacell\"], attrs={}, commands=[]),\n96         Command(\n97             indent=4, name=None, values=[\"text\"], attrs={\"value\": \"Cell\"}, commands=[]\n98         ),\n99     ], \"Test failed\"\n",
+      "col_offset": 4,
+      "end_col_offset": 20,
+      "filename": "./sdk/python/packages/flet/tests/test_datatable.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 87,
+      "line_range": [
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

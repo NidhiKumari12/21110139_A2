@@ -1,0 +1,80 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T18:57:13Z",
+  "metrics": {
+    "./sdk/python/packages/flet/src/flet/core/container.py": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 426,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 2,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 2,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 426,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "213         super().before_update()\n214         assert (\n215             self.__blend_mode is None\n216             or self.__gradient is not None\n217             or self.bgcolor is not None\n218         ), \"blend_mode applies to bgcolor or gradient, but no bgcolor or gradient was provided\"\n219         assert (\n",
+      "col_offset": 8,
+      "end_col_offset": 95,
+      "filename": "./sdk/python/packages/flet/src/flet/core/container.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 214,
+      "line_range": [
+        214,
+        215,
+        216,
+        217,
+        218
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "218         ), \"blend_mode applies to bgcolor or gradient, but no bgcolor or gradient was provided\"\n219         assert (\n220             self.__shape != BoxShape.CIRCLE or self.__border_radius is None\n221         ), \"border_radius is not supported with shape=BoxShape.CIRCLE\"\n222         self._set_attr_json(\"borderRadius\", self.__border_radius)\n",
+      "col_offset": 8,
+      "end_col_offset": 70,
+      "filename": "./sdk/python/packages/flet/src/flet/core/container.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 219,
+      "line_range": [
+        219,
+        220,
+        221
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

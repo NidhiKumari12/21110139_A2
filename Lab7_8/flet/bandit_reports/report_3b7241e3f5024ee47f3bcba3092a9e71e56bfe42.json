@@ -1,0 +1,1205 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T18:57:47Z",
+  "metrics": {
+    "./sdk/python/packages/flet/src/flet/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 455,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sdk/python/packages/flet/src/flet/core/colors.py": {
+      "CONFIDENCE.HIGH": 6,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 6,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 772,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sdk/python/packages/flet/src/flet/core/cupertino_colors.py": {
+      "CONFIDENCE.HIGH": 6,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 6,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 192,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sdk/python/packages/flet/src/flet/core/cupertino_icons.py": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 4,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 2751,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sdk/python/packages/flet/src/flet/core/icons.py": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 24,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 28,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 17769,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sdk/python/packages/flet/src/flet/core/page.py": {
+      "CONFIDENCE.HIGH": 10,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 10,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1553,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sdk/python/packages/flet/src/flet/core/theme.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 933,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./sdk/python/packages/flet/src/flet/core/types.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 322,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 30,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 24,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 54,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 24747,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "68     def with_opacity(opacity: Union[int, float], color: \"ColorValue\") -> str:\n69         assert 0 <= opacity <= 1, \"opacity must be between 0 and 1\"\n70         color_str = color.value if isinstance(color, Enum) else color\n",
+      "col_offset": 8,
+      "end_col_offset": 67,
+      "filename": "./sdk/python/packages/flet/src/flet/core/colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 69,
+      "line_range": [
+        69
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "74     def random():\n75         return random.choice(list(colors))\n76 \n",
+      "col_offset": 15,
+      "end_col_offset": 42,
+      "filename": "./sdk/python/packages/flet/src/flet/core/colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 75,
+      "line_range": [
+        75
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "83     def random_color():\n84         return random.choice(list(colors))\n85 \n",
+      "col_offset": 15,
+      "end_col_offset": 42,
+      "filename": "./sdk/python/packages/flet/src/flet/core/colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 84,
+      "line_range": [
+        84
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "430     def with_opacity(opacity: Union[int, float], color: \"ColorValue\") -> str:\n431         assert 0 <= opacity <= 1, \"opacity must be between 0 and 1\"\n432         color_str = color.value if isinstance(color, Enum) else color\n",
+      "col_offset": 8,
+      "end_col_offset": 67,
+      "filename": "./sdk/python/packages/flet/src/flet/core/colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 431,
+      "line_range": [
+        431
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "456             weights_list = [weights.get(c, 1) for c in choices]\n457             return random.choices(choices, weights=weights_list)[0]\n458         return random.choice(choices)\n",
+      "col_offset": 19,
+      "end_col_offset": 64,
+      "filename": "./sdk/python/packages/flet/src/flet/core/colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 457,
+      "line_range": [
+        457
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "457             return random.choices(choices, weights=weights_list)[0]\n458         return random.choice(choices)\n459 \n",
+      "col_offset": 15,
+      "end_col_offset": 37,
+      "filename": "./sdk/python/packages/flet/src/flet/core/colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 458,
+      "line_range": [
+        458
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "55         \"\"\"\n56         assert 0 <= opacity <= 1, \"opacity must be between 0 and 1\"\n57         color_str = color.value if isinstance(color, Enum) else color\n",
+      "col_offset": 8,
+      "end_col_offset": 67,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 56,
+      "line_range": [
+        56
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "61     def random():\n62         return random.choice(list(cupertino_colors))\n63 \n",
+      "col_offset": 15,
+      "end_col_offset": 52,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 62,
+      "line_range": [
+        62
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "70     def random_color():\n71         return random.choice(list(cupertino_colors))\n72 \n",
+      "col_offset": 15,
+      "end_col_offset": 52,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 71,
+      "line_range": [
+        71
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "138         \"\"\"\n139         assert 0 <= opacity <= 1, \"opacity must be between 0 and 1\"\n140         color_str = color.value if isinstance(color, Enum) else color\n",
+      "col_offset": 8,
+      "end_col_offset": 67,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 139,
+      "line_range": [
+        139
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "164             weights_list = [weights.get(c, 1) for c in choices]\n165             return random.choices(choices, weights=weights_list)[0]\n166         return random.choice(choices)\n",
+      "col_offset": 19,
+      "end_col_offset": 64,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 165,
+      "line_range": [
+        165
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "165             return random.choices(choices, weights=weights_list)[0]\n166         return random.choice(choices)\n167 \n",
+      "col_offset": 15,
+      "end_col_offset": 37,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_colors.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 166,
+      "line_range": [
+        166
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "31     def random():\n32         return random.choice(list(cupertino_icons))\n33 \n",
+      "col_offset": 15,
+      "end_col_offset": 51,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_icons.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 32,
+      "line_range": [
+        32
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "40     def random_icon():\n41         return random.choice(list(cupertino_icons))\n42 \n",
+      "col_offset": 15,
+      "end_col_offset": 51,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_icons.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 41,
+      "line_range": [
+        41
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "1415             weights_list = [weights.get(c, 1) for c in choices]\n1416             return random.choices(choices, weights=weights_list)[0]\n1417         return random.choice(choices)\n",
+      "col_offset": 19,
+      "end_col_offset": 64,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_icons.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 1416,
+      "line_range": [
+        1416
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "1416             return random.choices(choices, weights=weights_list)[0]\n1417         return random.choice(choices)\n1418 \n",
+      "col_offset": 15,
+      "end_col_offset": 37,
+      "filename": "./sdk/python/packages/flet/src/flet/core/cupertino_icons.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 1417,
+      "line_range": [
+        1417
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "31     def random():\n32         return random.choice(list(icons))\n33 \n",
+      "col_offset": 15,
+      "end_col_offset": 41,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 32,
+      "line_range": [
+        32
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "40     def random_icon():\n41         return random.choice(list(icons))\n42 \n",
+      "col_offset": 15,
+      "end_col_offset": 41,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 41,
+      "line_range": [
+        41
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "5613     PARTY_MODE_OUTLINED = \"party_mode_outlined\"\n5614     PASSWORD = \"password\"\n5615     PASSWORD_SHARP = \"password_sharp\"\n",
+      "col_offset": 15,
+      "end_col_offset": 25,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'password'",
+      "line_number": 5614,
+      "line_range": [
+        5614
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "5614     PASSWORD = \"password\"\n5615     PASSWORD_SHARP = \"password_sharp\"\n5616     PASSWORD_ROUNDED = \"password_rounded\"\n",
+      "col_offset": 21,
+      "end_col_offset": 37,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'password_sharp'",
+      "line_number": 5615,
+      "line_range": [
+        5615
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "5615     PASSWORD_SHARP = \"password_sharp\"\n5616     PASSWORD_ROUNDED = \"password_rounded\"\n5617     PASSWORD_OUTLINED = \"password_outlined\"\n",
+      "col_offset": 23,
+      "end_col_offset": 41,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'password_rounded'",
+      "line_number": 5616,
+      "line_range": [
+        5616
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "5616     PASSWORD_ROUNDED = \"password_rounded\"\n5617     PASSWORD_OUTLINED = \"password_outlined\"\n5618     PASTE = \"paste\"\n",
+      "col_offset": 24,
+      "end_col_offset": 43,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'password_outlined'",
+      "line_number": 5617,
+      "line_range": [
+        5617
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "8079     TOGGLE_ON_OUTLINED = \"toggle_on_outlined\"\n8080     TOKEN = \"token\"\n8081     TOKEN_SHARP = \"token_sharp\"\n",
+      "col_offset": 12,
+      "end_col_offset": 19,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'token'",
+      "line_number": 8080,
+      "line_range": [
+        8080
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "8080     TOKEN = \"token\"\n8081     TOKEN_SHARP = \"token_sharp\"\n8082     TOKEN_ROUNDED = \"token_rounded\"\n",
+      "col_offset": 18,
+      "end_col_offset": 31,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'token_sharp'",
+      "line_number": 8081,
+      "line_range": [
+        8081
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "8081     TOKEN_SHARP = \"token_sharp\"\n8082     TOKEN_ROUNDED = \"token_rounded\"\n8083     TOKEN_OUTLINED = \"token_outlined\"\n",
+      "col_offset": 20,
+      "end_col_offset": 35,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'token_rounded'",
+      "line_number": 8082,
+      "line_range": [
+        8082
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "8082     TOKEN_ROUNDED = \"token_rounded\"\n8083     TOKEN_OUTLINED = \"token_outlined\"\n8084     TOLL = \"toll\"\n",
+      "col_offset": 21,
+      "end_col_offset": 37,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'token_outlined'",
+      "line_number": 8083,
+      "line_range": [
+        8083
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "8786     WIFI_OFF_OUTLINED = \"wifi_off_outlined\"\n8787     WIFI_PASSWORD = \"wifi_password\"\n8788     WIFI_PASSWORD_SHARP = \"wifi_password_sharp\"\n",
+      "col_offset": 20,
+      "end_col_offset": 35,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'wifi_password'",
+      "line_number": 8787,
+      "line_range": [
+        8787
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "8787     WIFI_PASSWORD = \"wifi_password\"\n8788     WIFI_PASSWORD_SHARP = \"wifi_password_sharp\"\n8789     WIFI_PASSWORD_ROUNDED = \"wifi_password_rounded\"\n",
+      "col_offset": 26,
+      "end_col_offset": 47,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'wifi_password_sharp'",
+      "line_number": 8788,
+      "line_range": [
+        8788
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "8788     WIFI_PASSWORD_SHARP = \"wifi_password_sharp\"\n8789     WIFI_PASSWORD_ROUNDED = \"wifi_password_rounded\"\n8790     WIFI_PASSWORD_OUTLINED = \"wifi_password_outlined\"\n",
+      "col_offset": 28,
+      "end_col_offset": 51,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'wifi_password_rounded'",
+      "line_number": 8789,
+      "line_range": [
+        8789
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "8789     WIFI_PASSWORD_ROUNDED = \"wifi_password_rounded\"\n8790     WIFI_PASSWORD_OUTLINED = \"wifi_password_outlined\"\n8791     WIFI_PROTECTED_SETUP = \"wifi_protected_setup\"\n",
+      "col_offset": 29,
+      "end_col_offset": 53,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'wifi_password_outlined'",
+      "line_number": 8790,
+      "line_range": [
+        8790
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "8924             weights_list = [weights.get(c, 1) for c in choices]\n8925             return random.choices(choices, weights=weights_list)[0]\n8926         return random.choice(choices)\n",
+      "col_offset": 19,
+      "end_col_offset": 64,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 8925,
+      "line_range": [
+        8925
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "8925             return random.choices(choices, weights=weights_list)[0]\n8926         return random.choice(choices)\n8927 \n",
+      "col_offset": 15,
+      "end_col_offset": 37,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 330,
+        "link": "https://cwe.mitre.org/data/definitions/330.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "line_number": 8926,
+      "line_range": [
+        8926
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b311-random",
+      "test_id": "B311",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "14498     PARTY_MODE_OUTLINED = \"party_mode_outlined\"\n14499     PASSWORD = \"password\"\n14500     PASSWORD_SHARP = \"password_sharp\"\n",
+      "col_offset": 15,
+      "end_col_offset": 25,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'password'",
+      "line_number": 14499,
+      "line_range": [
+        14499
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "14499     PASSWORD = \"password\"\n14500     PASSWORD_SHARP = \"password_sharp\"\n14501     PASSWORD_ROUNDED = \"password_rounded\"\n",
+      "col_offset": 21,
+      "end_col_offset": 37,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'password_sharp'",
+      "line_number": 14500,
+      "line_range": [
+        14500
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "14500     PASSWORD_SHARP = \"password_sharp\"\n14501     PASSWORD_ROUNDED = \"password_rounded\"\n14502     PASSWORD_OUTLINED = \"password_outlined\"\n",
+      "col_offset": 23,
+      "end_col_offset": 41,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'password_rounded'",
+      "line_number": 14501,
+      "line_range": [
+        14501
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "14501     PASSWORD_ROUNDED = \"password_rounded\"\n14502     PASSWORD_OUTLINED = \"password_outlined\"\n14503     PASTE = \"paste\"\n",
+      "col_offset": 24,
+      "end_col_offset": 43,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'password_outlined'",
+      "line_number": 14502,
+      "line_range": [
+        14502
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "16964     TOGGLE_ON_OUTLINED = \"toggle_on_outlined\"\n16965     TOKEN = \"token\"\n16966     TOKEN_SHARP = \"token_sharp\"\n",
+      "col_offset": 12,
+      "end_col_offset": 19,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'token'",
+      "line_number": 16965,
+      "line_range": [
+        16965
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "16965     TOKEN = \"token\"\n16966     TOKEN_SHARP = \"token_sharp\"\n16967     TOKEN_ROUNDED = \"token_rounded\"\n",
+      "col_offset": 18,
+      "end_col_offset": 31,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'token_sharp'",
+      "line_number": 16966,
+      "line_range": [
+        16966
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "16966     TOKEN_SHARP = \"token_sharp\"\n16967     TOKEN_ROUNDED = \"token_rounded\"\n16968     TOKEN_OUTLINED = \"token_outlined\"\n",
+      "col_offset": 20,
+      "end_col_offset": 35,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'token_rounded'",
+      "line_number": 16967,
+      "line_range": [
+        16967
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "16967     TOKEN_ROUNDED = \"token_rounded\"\n16968     TOKEN_OUTLINED = \"token_outlined\"\n16969     TOLL = \"toll\"\n",
+      "col_offset": 21,
+      "end_col_offset": 37,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'token_outlined'",
+      "line_number": 16968,
+      "line_range": [
+        16968
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "17671     WIFI_OFF_OUTLINED = \"wifi_off_outlined\"\n17672     WIFI_PASSWORD = \"wifi_password\"\n17673     WIFI_PASSWORD_SHARP = \"wifi_password_sharp\"\n",
+      "col_offset": 20,
+      "end_col_offset": 35,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'wifi_password'",
+      "line_number": 17672,
+      "line_range": [
+        17672
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "17672     WIFI_PASSWORD = \"wifi_password\"\n17673     WIFI_PASSWORD_SHARP = \"wifi_password_sharp\"\n17674     WIFI_PASSWORD_ROUNDED = \"wifi_password_rounded\"\n",
+      "col_offset": 26,
+      "end_col_offset": 47,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'wifi_password_sharp'",
+      "line_number": 17673,
+      "line_range": [
+        17673
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "17673     WIFI_PASSWORD_SHARP = \"wifi_password_sharp\"\n17674     WIFI_PASSWORD_ROUNDED = \"wifi_password_rounded\"\n17675     WIFI_PASSWORD_OUTLINED = \"wifi_password_outlined\"\n",
+      "col_offset": 28,
+      "end_col_offset": 51,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'wifi_password_rounded'",
+      "line_number": 17674,
+      "line_range": [
+        17674
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "17674     WIFI_PASSWORD_ROUNDED = \"wifi_password_rounded\"\n17675     WIFI_PASSWORD_OUTLINED = \"wifi_password_outlined\"\n17676     WIFI_PROTECTED_SETUP = \"wifi_protected_setup\"\n",
+      "col_offset": 29,
+      "end_col_offset": 53,
+      "filename": "./sdk/python/packages/flet/src/flet/core/icons.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 259,
+        "link": "https://cwe.mitre.org/data/definitions/259.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Possible hardcoded password: 'wifi_password_outlined'",
+      "line_number": 17675,
+      "line_range": [
+        17675
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b105_hardcoded_password_string.html",
+      "test_id": "B105",
+      "test_name": "hardcoded_password_string"
+    },
+    {
+      "code": "689     async def fetch_page_details_async(self) -> None:\n690         assert self.__conn\n691         props = [\n",
+      "col_offset": 8,
+      "end_col_offset": 26,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 690,
+      "line_range": [
+        690
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "771             control._previous_children.clear()\n772             assert control.uid is not None\n773             removed_controls = []\n",
+      "col_offset": 12,
+      "end_col_offset": 42,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 772,
+      "line_range": [
+        772
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "883         _session_page.set(self)\n884         assert asyncio.iscoroutinefunction(handler)\n885 \n",
+      "col_offset": 8,
+      "end_col_offset": 51,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 884,
+      "line_range": [
+        884
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "916         else:\n917             assert self.__loop\n918             self.__loop.call_soon_threadsafe(\n",
+      "col_offset": 12,
+      "end_col_offset": 30,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 917,
+      "line_range": [
+        917
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1062     async def __on_authorize_async(self, e) -> None:\n1063         assert self.__authorization\n1064         d = json.loads(e.data)\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1063,
+      "line_range": [
+        1063
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1065         state = d.get(\"state\")\n1066         assert state == self.__authorization.state\n1067 \n",
+      "col_offset": 8,
+      "end_col_offset": 50,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1066,
+      "line_range": [
+        1066
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1087             code = d.get(\"code\")\n1088             assert code not in [None, \"\"]\n1089             try:\n",
+      "col_offset": 12,
+      "end_col_offset": 41,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1088,
+      "line_range": [
+        1088
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1209             return\n1210         assert evt is not None\n1211 \n",
+      "col_offset": 8,
+      "end_col_offset": 30,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1210,
+      "line_range": [
+        1210
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1251             return\n1252         assert evt is not None\n1253 \n",
+      "col_offset": 8,
+      "end_col_offset": 30,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1252,
+      "line_range": [
+        1252
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1420         brightness = self._get_attr(\"platformBrightness\")\n1421         assert brightness\n1422         return Brightness(brightness)\n",
+      "col_offset": 8,
+      "end_col_offset": 25,
+      "filename": "./sdk/python/packages/flet/src/flet/core/page.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1421,
+      "line_range": [
+        1421
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

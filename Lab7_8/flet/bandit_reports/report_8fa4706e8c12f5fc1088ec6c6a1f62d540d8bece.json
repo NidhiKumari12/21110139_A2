@@ -1,0 +1,1159 @@
+{
+  "errors": [
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/audio_recorder.py",
+      "reason": "No such file or directory"
+    }
+  ],
+  "generated_at": "2025-03-25T18:57:59Z",
+  "metrics": {
+    "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py": {
+      "CONFIDENCE.HIGH": 56,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 56,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1957,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 56,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 56,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1957,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "643     def initialize_build(self):\n644         assert self.options\n645         self.emojis = {\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 644,
+      "line_range": [
+        644
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "821     def validate_target_platform(self):\n822         assert self.options\n823         if (\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 822,
+      "line_range": [
+        822
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "847     def validate_entry_point(self):\n848         assert self.options\n849         assert self.python_app_path\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 848,
+      "line_range": [
+        848
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "848         assert self.options\n849         assert self.python_app_path\n850         assert self.get_pyproject\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 849,
+      "line_range": [
+        849
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "849         assert self.python_app_path\n850         assert self.get_pyproject\n851 \n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 850,
+      "line_range": [
+        850
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "871     def setup_template_data(self):\n872         assert self.options\n873         assert self.python_app_path\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 872,
+      "line_range": [
+        872
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "872         assert self.options\n873         assert self.python_app_path\n874         assert self.get_pyproject\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 873,
+      "line_range": [
+        873
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "873         assert self.python_app_path\n874         assert self.get_pyproject\n875 \n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 874,
+      "line_range": [
+        874
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1086 \n1087         assert self.flutter_dir\n1088         self.template_data = {\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1087,
+      "line_range": [
+        1087
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1165     def create_flutter_project(self, second_pass=False):\n1166         assert self.options\n1167         assert self.get_pyproject\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1166,
+      "line_range": [
+        1166
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1166         assert self.options\n1167         assert self.get_pyproject\n1168         assert self.flutter_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1167,
+      "line_range": [
+        1167
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1167         assert self.get_pyproject\n1168         assert self.flutter_dir\n1169         assert self.template_data\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1168,
+      "line_range": [
+        1168
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1168         assert self.flutter_dir\n1169         assert self.template_data\n1170         assert self.build_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1169,
+      "line_range": [
+        1169
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1169         assert self.template_data\n1170         assert self.build_dir\n1171         assert self.pubspec_path\n",
+      "col_offset": 8,
+      "end_col_offset": 29,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1170,
+      "line_range": [
+        1170
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1170         assert self.build_dir\n1171         assert self.pubspec_path\n1172 \n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1171,
+      "line_range": [
+        1171
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1258     def register_flutter_extensions(self):\n1259         assert self.flutter_packages_dir\n1260         assert self.flutter_packages_temp_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1259,
+      "line_range": [
+        1259
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1259         assert self.flutter_packages_dir\n1260         assert self.flutter_packages_temp_dir\n1261         assert isinstance(self.flutter_dependencies, dict)\n",
+      "col_offset": 8,
+      "end_col_offset": 45,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1260,
+      "line_range": [
+        1260
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1260         assert self.flutter_packages_temp_dir\n1261         assert isinstance(self.flutter_dependencies, dict)\n1262         assert self.template_data\n",
+      "col_offset": 8,
+      "end_col_offset": 58,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1261,
+      "line_range": [
+        1261
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1261         assert isinstance(self.flutter_dependencies, dict)\n1262         assert self.template_data\n1263         assert self.build_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1262,
+      "line_range": [
+        1262
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1262         assert self.template_data\n1263         assert self.build_dir\n1264 \n",
+      "col_offset": 8,
+      "end_col_offset": 29,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1263,
+      "line_range": [
+        1263
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1289     def update_flutter_dependencies(self):\n1290         assert self.pubspec_path\n1291         assert self.template_data\n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1290,
+      "line_range": [
+        1290
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1290         assert self.pubspec_path\n1291         assert self.template_data\n1292         assert self.get_pyproject\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1291,
+      "line_range": [
+        1291
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1291         assert self.template_data\n1292         assert self.get_pyproject\n1293         assert self.build_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1292,
+      "line_range": [
+        1292
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1292         assert self.get_pyproject\n1293         assert self.build_dir\n1294         assert isinstance(self.flutter_dependencies, dict)\n",
+      "col_offset": 8,
+      "end_col_offset": 29,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1293,
+      "line_range": [
+        1293
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1293         assert self.build_dir\n1294         assert isinstance(self.flutter_dependencies, dict)\n1295 \n",
+      "col_offset": 8,
+      "end_col_offset": 58,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1294,
+      "line_range": [
+        1294
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1313     def customize_icons(self):\n1314         assert self.package_app_path\n1315         assert self.flutter_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 36,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1314,
+      "line_range": [
+        1314
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1314         assert self.package_app_path\n1315         assert self.flutter_dir\n1316         assert self.options\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1315,
+      "line_range": [
+        1315
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1315         assert self.flutter_dir\n1316         assert self.options\n1317         assert self.get_pyproject\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1316,
+      "line_range": [
+        1316
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1316         assert self.options\n1317         assert self.get_pyproject\n1318         assert self.pubspec_path\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1317,
+      "line_range": [
+        1317
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1317         assert self.get_pyproject\n1318         assert self.pubspec_path\n1319         assert self.build_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1318,
+      "line_range": [
+        1318
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1318         assert self.pubspec_path\n1319         assert self.build_dir\n1320 \n",
+      "col_offset": 8,
+      "end_col_offset": 29,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1319,
+      "line_range": [
+        1319
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1449     def customize_splash_images(self):\n1450         assert self.package_app_path\n1451         assert self.flutter_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 36,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1450,
+      "line_range": [
+        1450
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1450         assert self.package_app_path\n1451         assert self.flutter_dir\n1452         assert self.options\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1451,
+      "line_range": [
+        1451
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1451         assert self.flutter_dir\n1452         assert self.options\n1453         assert self.get_pyproject\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1452,
+      "line_range": [
+        1452
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1452         assert self.options\n1453         assert self.get_pyproject\n1454         assert self.pubspec_path\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1453,
+      "line_range": [
+        1453
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1453         assert self.get_pyproject\n1454         assert self.pubspec_path\n1455         assert self.build_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1454,
+      "line_range": [
+        1454
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1454         assert self.pubspec_path\n1455         assert self.build_dir\n1456 \n",
+      "col_offset": 8,
+      "end_col_offset": 29,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1455,
+      "line_range": [
+        1455
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1710     def package_python_app(self):\n1711         assert self.options\n1712         assert self.get_pyproject\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1711,
+      "line_range": [
+        1711
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1711         assert self.options\n1712         assert self.get_pyproject\n1713         assert self.python_app_path\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1712,
+      "line_range": [
+        1712
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1712         assert self.get_pyproject\n1713         assert self.python_app_path\n1714         assert self.package_app_path\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1713,
+      "line_range": [
+        1713
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1713         assert self.python_app_path\n1714         assert self.package_app_path\n1715         assert self.build_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 36,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1714,
+      "line_range": [
+        1714
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1714         assert self.package_app_path\n1715         assert self.build_dir\n1716         assert self.flutter_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 29,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1715,
+      "line_range": [
+        1715
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1715         assert self.build_dir\n1716         assert self.flutter_dir\n1717         assert self.flutter_packages_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1716,
+      "line_range": [
+        1716
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1716         assert self.flutter_dir\n1717         assert self.flutter_packages_dir\n1718         assert self.flutter_packages_temp_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1717,
+      "line_range": [
+        1717
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1717         assert self.flutter_packages_dir\n1718         assert self.flutter_packages_temp_dir\n1719         assert self.template_data\n",
+      "col_offset": 8,
+      "end_col_offset": 45,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1718,
+      "line_range": [
+        1718
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1718         assert self.flutter_packages_temp_dir\n1719         assert self.template_data\n1720 \n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1719,
+      "line_range": [
+        1719
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1917     def get_bool_setting(self, cli_option, pyproj_setting, default_value):\n1918         assert self.get_pyproject\n1919         return (\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1918,
+      "line_range": [
+        1918
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1936     def flutter_build(self):\n1937         assert self.options\n1938         assert self.build_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1937,
+      "line_range": [
+        1937
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1937         assert self.options\n1938         assert self.build_dir\n1939         assert self.get_pyproject\n",
+      "col_offset": 8,
+      "end_col_offset": 29,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1938,
+      "line_range": [
+        1938
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1938         assert self.build_dir\n1939         assert self.get_pyproject\n1940         assert self.template_data\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1939,
+      "line_range": [
+        1939
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1939         assert self.get_pyproject\n1940         assert self.template_data\n1941 \n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1940,
+      "line_range": [
+        1940
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "2052     def copy_build_output(self):\n2053         assert self.template_data\n2054         assert self.options\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 2053,
+      "line_range": [
+        2053
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "2053         assert self.template_data\n2054         assert self.options\n2055         assert self.flutter_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 2054,
+      "line_range": [
+        2054
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "2054         assert self.options\n2055         assert self.flutter_dir\n2056         assert self.out_dir\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 2055,
+      "line_range": [
+        2055
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "2055         assert self.flutter_dir\n2056         assert self.out_dir\n2057         assert self.assets_path\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 2056,
+      "line_range": [
+        2056
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "2056         assert self.out_dir\n2057         assert self.assets_path\n2058 \n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./sdk/python/packages/flet-cli/src/flet_cli/commands/build.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 2057,
+      "line_range": [
+        2057
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

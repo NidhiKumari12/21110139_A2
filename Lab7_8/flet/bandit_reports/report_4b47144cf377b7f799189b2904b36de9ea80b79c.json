@@ -1,0 +1,116 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T18:57:50Z",
+  "metrics": {
+    "./sdk/python/packages/flet/src/flet/core/app_bar.py": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 4,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 274,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 4,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 274,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "181     def toolbar_opacity(self, value: OptionalNumber):\n182         assert value is None or (\n183             0 <= value <= 1\n184         ), \"toolbar_opacity is out of range (0-1)\"\n185         self._set_attr(\"toolbarOpacity\", value)\n",
+      "col_offset": 8,
+      "end_col_offset": 50,
+      "filename": "./sdk/python/packages/flet/src/flet/core/app_bar.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 182,
+      "line_range": [
+        182,
+        183,
+        184
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "249     def toolbar_height(self, value: OptionalNumber):\n250         assert value is None or value >= 0, \"toolbar_height cannot be negative\"\n251         self._set_attr(\"toolbarHeight\", value)\n",
+      "col_offset": 8,
+      "end_col_offset": 79,
+      "filename": "./sdk/python/packages/flet/src/flet/core/app_bar.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 250,
+      "line_range": [
+        250
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "330     def elevation(self, value: OptionalNumber):\n331         assert value is None or value >= 0, \"elevation cannot be negative\"\n332         self._set_attr(\"elevation\", value)\n",
+      "col_offset": 8,
+      "end_col_offset": 74,
+      "filename": "./sdk/python/packages/flet/src/flet/core/app_bar.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 331,
+      "line_range": [
+        331
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "340     def elevation_on_scroll(self, value: OptionalNumber):\n341         assert value is None or value >= 0, \"elevation_on_scroll cannot be negative\"\n342         self._set_attr(\"elevationOnScroll\", value)\n",
+      "col_offset": 8,
+      "end_col_offset": 84,
+      "filename": "./sdk/python/packages/flet/src/flet/core/app_bar.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 341,
+      "line_range": [
+        341
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

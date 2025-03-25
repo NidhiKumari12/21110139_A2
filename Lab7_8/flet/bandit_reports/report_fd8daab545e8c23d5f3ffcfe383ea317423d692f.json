@@ -1,0 +1,204 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T18:57:04Z",
+  "metrics": {
+    "./sdk/python/packages/flet/src/flet/core/control.py": {
+      "CONFIDENCE.HIGH": 8,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 8,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 490,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 8,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 8,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 490,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "290     def opacity(self, value: OptionalNumber):\n291         assert (\n292             value is None or 0.0 <= value <= 1.0\n293         ), \"opacity must be between 0.0 and 1.0\"\n294         self._set_attr(\"opacity\", value)\n",
+      "col_offset": 8,
+      "end_col_offset": 48,
+      "filename": "./sdk/python/packages/flet/src/flet/core/control.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 291,
+      "line_range": [
+        291,
+        292,
+        293
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "324     def update(self) -> None:\n325         assert (\n326             self.__page\n327         ), f\"{self.__class__.__qualname__} Control must be added to the page first\"\n328         self.__page.update(self)\n",
+      "col_offset": 8,
+      "end_col_offset": 83,
+      "filename": "./sdk/python/packages/flet/src/flet/core/control.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 325,
+      "line_range": [
+        325,
+        326,
+        327
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "330     def clean(self) -> None:\n331         assert (\n332             self.__page\n333         ), f\"{self.__class__.__qualname__} Control must be added to the page\"\n334         self.__page._clean(self)\n",
+      "col_offset": 8,
+      "end_col_offset": 77,
+      "filename": "./sdk/python/packages/flet/src/flet/core/control.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 331,
+      "line_range": [
+        331,
+        332,
+        333
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "342     ) -> Optional[str]:\n343         assert (\n344             self.__page\n345         ), f\"{self.__class__.__qualname__} Control must be added to the page first\"\n346         if arguments:\n",
+      "col_offset": 8,
+      "end_col_offset": 83,
+      "filename": "./sdk/python/packages/flet/src/flet/core/control.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 343,
+      "line_range": [
+        343,
+        344,
+        345
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "363     ):\n364         assert (\n365             self.__page\n366         ), f\"{self.__class__.__qualname__} Control must be added to the page first\"\n367         if arguments:\n",
+      "col_offset": 8,
+      "end_col_offset": 83,
+      "filename": "./sdk/python/packages/flet/src/flet/core/control.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 364,
+      "line_range": [
+        364,
+        365,
+        366
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "460                         )\n461                         assert self.__uid is not None\n462                         ctrl.parent = self  # set as parent\n",
+      "col_offset": 24,
+      "end_col_offset": 53,
+      "filename": "./sdk/python/packages/flet/src/flet/core/control.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 461,
+      "line_range": [
+        461
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "492                     )\n493                     assert self.__uid is not None\n494                     ctrl.parent = self  # set as parent\n",
+      "col_offset": 20,
+      "end_col_offset": 49,
+      "filename": "./sdk/python/packages/flet/src/flet/core/control.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 493,
+      "line_range": [
+        493
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "586         elif update and len(command.attrs) > 0:\n587             assert self.__uid is not None\n588             command.values.append(self.__uid)\n",
+      "col_offset": 12,
+      "end_col_offset": 41,
+      "filename": "./sdk/python/packages/flet/src/flet/core/control.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 587,
+      "line_range": [
+        587
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

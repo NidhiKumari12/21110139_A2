@@ -1,0 +1,441 @@
+{
+  "errors": [
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/__init__.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/alert_dialog.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/app_bar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/badge.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/banner.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/border.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/bottom_app_bar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/bottom_sheet.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/box.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/buttons.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/canvas/color.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/canvas/shadow.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/card.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/bar_chart.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/bar_chart_rod.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/bar_chart_rod_stack_item.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/chart_grid_lines.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/chart_point_line.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/chart_point_shape.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/line_chart.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/line_chart_data.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/pie_chart.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/charts/pie_chart_section.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/checkbox.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/chip.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/circle_avatar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/colors.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/container.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/control.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_activity_indicator.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_app_bar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_bottom_sheet.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_checkbox.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_colors.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_context_menu_action.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_date_picker.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_filled_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_icons.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_list_tile.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_navigation_bar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_picker.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_radio.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_segmented_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_slider.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_sliding_segmented_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_switch.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_textfield.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/cupertino_timer_picker.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/datatable.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/date_picker.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/divider.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/dropdown.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/elevated_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/expansion_panel.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/expansion_tile.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/filled_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/filled_tonal_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/floating_action_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/form_field_control.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/geolocator.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/icon.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/icon_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/icons.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/image.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/list_tile.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/map/circle_layer.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/map/map.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/map/map_configuration.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/map/polygon_layer.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/map/polyline_layer.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/map/rich_attribution.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/map/simple_attribution.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/menu_bar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/navigation_bar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/navigation_drawer.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/navigation_rail.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/outlined_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/page.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/pagelet.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/painting.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/placeholder.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/popup_menu_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/progress_bar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/progress_ring.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/radio.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/range_slider.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/search_bar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/slider.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/snack_bar.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/switch.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/tabs.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/text.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/text_button.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/text_style.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/textfield.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/theme.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/tooltip.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/types.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/vertical_divider.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/video.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/view.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/src/flet_core/webview.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/tests/test_colors.py",
+      "reason": "No such file or directory"
+    },
+    {
+      "filename": "./sdk/python/packages/flet-core/tests/test_icons.py",
+      "reason": "No such file or directory"
+    }
+  ],
+  "generated_at": "2025-03-25T18:57:58Z",
+  "metrics": {
+    "_totals": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": []
+}
