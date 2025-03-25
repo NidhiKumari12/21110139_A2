@@ -1,0 +1,194 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T20:02:03Z",
+  "metrics": {
+    "./hopper/benchmark_attn.py": {
+      "CONFIDENCE.HIGH": 8,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 8,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 271,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 8,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 8,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 271,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "93     _, nheads_k, seqlen_k, _ = k.shape\n94     assert v.shape == (b, nheads_k, seqlen_k, headdim)\n95     assert cudnn is not None, 'CUDNN is not available'\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 94,
+      "line_range": [
+        94
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "94     assert v.shape == (b, nheads_k, seqlen_k, headdim)\n95     assert cudnn is not None, 'CUDNN is not available'\n96     q_gpu, k_gpu, v_gpu = q, k, v\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 95,
+      "line_range": [
+        95
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "148     _, nheads_k, seqlen_k, _ = k.shape\n149     assert v.shape == (b, nheads_k, seqlen_k, headdim)\n150     assert g.shape == (b, nheads, seqlen_q, headdim)\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 149,
+      "line_range": [
+        149
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "149     assert v.shape == (b, nheads_k, seqlen_k, headdim)\n150     assert g.shape == (b, nheads, seqlen_q, headdim)\n151     assert o.shape == (b, nheads, seqlen_q, headdim)\n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 150,
+      "line_range": [
+        150
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "150     assert g.shape == (b, nheads, seqlen_q, headdim)\n151     assert o.shape == (b, nheads, seqlen_q, headdim)\n152     assert lse.shape == (b, nheads, seqlen_q, 1)\n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 151,
+      "line_range": [
+        151
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "151     assert o.shape == (b, nheads, seqlen_q, headdim)\n152     assert lse.shape == (b, nheads, seqlen_q, 1)\n153     assert cudnn is not None, 'CUDNN is not available'\n",
+      "col_offset": 4,
+      "end_col_offset": 48,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 152,
+      "line_range": [
+        152
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "152     assert lse.shape == (b, nheads, seqlen_q, 1)\n153     assert cudnn is not None, 'CUDNN is not available'\n154     q_gpu, k_gpu, v_gpu, o_gpu, g_gpu = q, k, v, o, g\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 153,
+      "line_range": [
+        153
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "302         if page_size is not None:\n303             assert seqlen % page_size == 0\n304             k_paged, v_paged = [rearrange(x, \"b (n p) h d -> (b n) p h d\", p=page_size) for x in [k, v]]\n",
+      "col_offset": 12,
+      "end_col_offset": 42,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 303,
+      "line_range": [
+        303
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

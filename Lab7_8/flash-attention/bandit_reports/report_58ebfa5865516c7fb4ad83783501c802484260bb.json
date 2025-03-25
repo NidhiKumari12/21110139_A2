@@ -1,0 +1,429 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T20:02:04Z",
+  "metrics": {
+    "./hopper/benchmark_attn.py": {
+      "CONFIDENCE.HIGH": 8,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 8,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 271,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./hopper/setup.py": {
+      "CONFIDENCE.HIGH": 11,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 1,
+      "SEVERITY.LOW": 8,
+      "SEVERITY.MEDIUM": 2,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 519,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 19,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 1,
+      "SEVERITY.LOW": 16,
+      "SEVERITY.MEDIUM": 2,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 790,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "93     _, nheads_k, seqlen_k, _ = k.shape\n94     assert v.shape == (b, nheads_k, seqlen_k, headdim)\n95     assert cudnn is not None, 'CUDNN is not available'\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 94,
+      "line_range": [
+        94
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "94     assert v.shape == (b, nheads_k, seqlen_k, headdim)\n95     assert cudnn is not None, 'CUDNN is not available'\n96     q_gpu, k_gpu, v_gpu = q, k, v\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 95,
+      "line_range": [
+        95
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "148     _, nheads_k, seqlen_k, _ = k.shape\n149     assert v.shape == (b, nheads_k, seqlen_k, headdim)\n150     assert g.shape == (b, nheads, seqlen_q, headdim)\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 149,
+      "line_range": [
+        149
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "149     assert v.shape == (b, nheads_k, seqlen_k, headdim)\n150     assert g.shape == (b, nheads, seqlen_q, headdim)\n151     assert o.shape == (b, nheads, seqlen_q, headdim)\n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 150,
+      "line_range": [
+        150
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "150     assert g.shape == (b, nheads, seqlen_q, headdim)\n151     assert o.shape == (b, nheads, seqlen_q, headdim)\n152     assert lse.shape == (b, nheads, seqlen_q, 1)\n",
+      "col_offset": 4,
+      "end_col_offset": 52,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 151,
+      "line_range": [
+        151
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "151     assert o.shape == (b, nheads, seqlen_q, headdim)\n152     assert lse.shape == (b, nheads, seqlen_q, 1)\n153     assert cudnn is not None, 'CUDNN is not available'\n",
+      "col_offset": 4,
+      "end_col_offset": 48,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 152,
+      "line_range": [
+        152
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "152     assert lse.shape == (b, nheads, seqlen_q, 1)\n153     assert cudnn is not None, 'CUDNN is not available'\n154     q_gpu, k_gpu, v_gpu, o_gpu, g_gpu = q, k, v, o, g\n",
+      "col_offset": 4,
+      "end_col_offset": 54,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 153,
+      "line_range": [
+        153
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "302         if page_size is not None:\n303             assert seqlen % page_size == 0\n304             k_paged, v_paged = [rearrange(x, \"b (n p) h d -> (b n) p h d\", p=page_size) for x in [k, v]]\n",
+      "col_offset": 12,
+      "end_col_offset": 42,
+      "filename": "./hopper/benchmark_attn.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 303,
+      "line_range": [
+        303
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "17 from setuptools import setup, find_packages\n18 import subprocess\n19 \n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 18,
+      "line_range": [
+        18
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "123     # Sanity checks...\n124     assert len(sources) == len(objects)\n125     assert len(sources) > 0\n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 124,
+      "line_range": [
+        124
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "124     assert len(sources) == len(objects)\n125     assert len(sources) > 0\n126 \n",
+      "col_offset": 4,
+      "end_col_offset": 27,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 125,
+      "line_range": [
+        125
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "233         if IS_WINDOWS:\n234             cl_paths = subprocess.check_output(['where',\n235                                                 'cl']).decode(*SUBPROCESS_DECODE_ARGS).split('\\r\\n')\n236             if len(cl_paths) >= 1:\n",
+      "col_offset": 23,
+      "end_col_offset": 54,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 234,
+      "line_range": [
+        234,
+        235
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "233         if IS_WINDOWS:\n234             cl_paths = subprocess.check_output(['where',\n235                                                 'cl']).decode(*SUBPROCESS_DECODE_ARGS).split('\\r\\n')\n236             if len(cl_paths) >= 1:\n",
+      "col_offset": 23,
+      "end_col_offset": 54,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 234,
+      "line_range": [
+        234,
+        235
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "283 def get_cuda_bare_metal_version(cuda_dir):\n284     raw_output = subprocess.check_output([cuda_dir + \"/bin/nvcc\", \"-V\"], universal_newlines=True)\n285     output = raw_output.split()\n",
+      "col_offset": 17,
+      "end_col_offset": 97,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 284,
+      "line_range": [
+        284
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "342     # Set timeout to 300 seconds to prevent the request from hanging forever.\n343     return urllib.request.urlopen(request, timeout=300)\n344 \n",
+      "col_offset": 11,
+      "end_col_offset": 55,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 22,
+        "link": "https://cwe.mitre.org/data/definitions/22.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+      "line_number": 343,
+      "line_range": [
+        343
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+      "test_id": "B310",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "363         file = tarfile.open(fileobj=open_url(url), mode=\"r|*\")\n364         file.extractall(path=tmp_path)\n365     os.makedirs(os.path.split(dst_path)[0], exist_ok=True)\n",
+      "col_offset": 8,
+      "end_col_offset": 38,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 22,
+        "link": "https://cwe.mitre.org/data/definitions/22.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "tarfile.extractall used without any validation. Please check and discard dangerous members.",
+      "line_number": 364,
+      "line_range": [
+        364
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b202_tarfile_unsafe_members.html",
+      "test_id": "B202",
+      "test_name": "tarfile_unsafe_members"
+    },
+    {
+      "code": "388 # files included in the source distribution, in case the user compiles from source.\n389 subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"../csrc/cutlass\"])\n390 \n",
+      "col_offset": 0,
+      "end_col_offset": 75,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 389,
+      "line_range": [
+        389
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "388 # files included in the source distribution, in case the user compiles from source.\n389 subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"../csrc/cutlass\"])\n390 \n",
+      "col_offset": 0,
+      "end_col_offset": 75,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 389,
+      "line_range": [
+        389
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "601         try:\n602             urllib.request.urlretrieve(wheel_url, wheel_filename)\n603 \n",
+      "col_offset": 12,
+      "end_col_offset": 65,
+      "filename": "./hopper/setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 22,
+        "link": "https://cwe.mitre.org/data/definitions/22.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+      "line_number": 602,
+      "line_range": [
+        602
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+      "test_id": "B310",
+      "test_name": "blacklist"
+    }
+  ]
+}

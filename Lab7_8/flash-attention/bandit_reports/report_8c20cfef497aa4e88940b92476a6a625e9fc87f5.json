@@ -1,0 +1,644 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T20:02:22Z",
+  "metrics": {
+    "./flash_attn/layers/rotary.py": {
+      "CONFIDENCE.HIGH": 15,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 15,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 468,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/ops/triton/cross_entropy.py": {
+      "CONFIDENCE.HIGH": 4,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 4,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 287,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/ops/triton/rotary.py": {
+      "CONFIDENCE.HIGH": 10,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 10,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 198,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 29,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 29,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 953,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "25     ro_dim = cos.shape[-1] * 2\n26     assert ro_dim <= x.shape[-1]\n27     cos = repeat(cos, \"... d -> ... 1 (2 d)\" if not interleaved else \"... d -> ... 1 (d 2)\")\n",
+      "col_offset": 4,
+      "end_col_offset": 32,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 26,
+      "line_range": [
+        26
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "149                 batch, seqlen, three, nheads, headdim = qkv.shape\n150                 assert three == 3\n151                 # qk = rearrange(qkv[:, :, :2], \"b s t h d -> b s (t h) d\")\n",
+      "col_offset": 16,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 150,
+      "line_range": [
+        150
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "153             else:\n154                 assert qkv.dim() == 4\n155                 assert num_heads_q is not None\n",
+      "col_offset": 16,
+      "end_col_offset": 37,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 154,
+      "line_range": [
+        154
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "154                 assert qkv.dim() == 4\n155                 assert num_heads_q is not None\n156                 num_heads_k = (qkv.shape[2] - num_heads_q) // 2\n",
+      "col_offset": 16,
+      "end_col_offset": 46,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 155,
+      "line_range": [
+        155
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "156                 num_heads_k = (qkv.shape[2] - num_heads_q) // 2\n157                 assert qkv.shape[2] == num_heads_q + 2 * num_heads_k\n158                 qk = qkv[:, :, :num_heads_q + num_heads_k]\n",
+      "col_offset": 16,
+      "end_col_offset": 68,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 157,
+      "line_range": [
+        157
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "167             else:\n168                 assert qkv.dim() == 4\n169                 assert num_heads_q is not None\n",
+      "col_offset": 16,
+      "end_col_offset": 37,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 168,
+      "line_range": [
+        168
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "168                 assert qkv.dim() == 4\n169                 assert num_heads_q is not None\n170                 num_heads_k = (qkv.shape[2] - num_heads_q) // 2\n",
+      "col_offset": 16,
+      "end_col_offset": 46,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 169,
+      "line_range": [
+        169
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "170                 num_heads_k = (qkv.shape[2] - num_heads_q) // 2\n171                 assert qkv.shape[2] == num_heads_q + 2 * num_heads_k\n172                 q, k = qkv[:, :, :num_heads_q], qkv[:, :, num_heads_q : num_heads_q + num_heads_k]\n",
+      "col_offset": 16,
+      "end_col_offset": 68,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 171,
+      "line_range": [
+        171
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "199             else:\n200                 assert dqkv.dim() == 4\n201                 assert ctx.num_heads_q is not None\n",
+      "col_offset": 16,
+      "end_col_offset": 38,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 200,
+      "line_range": [
+        200
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "200                 assert dqkv.dim() == 4\n201                 assert ctx.num_heads_q is not None\n202                 num_heads_k = (dqkv.shape[2] - ctx.num_heads_q) // 2\n",
+      "col_offset": 16,
+      "end_col_offset": 50,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 201,
+      "line_range": [
+        201
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "202                 num_heads_k = (dqkv.shape[2] - ctx.num_heads_q) // 2\n203                 assert dqkv.shape[2] == ctx.num_heads_q + 2 * num_heads_k\n204                 dqk = dqkv[:, :, : ctx.num_heads_q + num_heads_k]\n",
+      "col_offset": 16,
+      "end_col_offset": 73,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 203,
+      "line_range": [
+        203
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "219             else:\n220                 assert dqkv.dim() == 4\n221                 assert ctx.num_heads_q is not None\n",
+      "col_offset": 16,
+      "end_col_offset": 38,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 220,
+      "line_range": [
+        220
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "220                 assert dqkv.dim() == 4\n221                 assert ctx.num_heads_q is not None\n222                 num_heads_k = (dqkv.shape[2] - ctx.num_heads_q) // 2\n",
+      "col_offset": 16,
+      "end_col_offset": 50,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 221,
+      "line_range": [
+        221
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "222                 num_heads_k = (dqkv.shape[2] - ctx.num_heads_q) // 2\n223                 assert dqkv.shape[2] == ctx.num_heads_q + 2 * num_heads_k\n224                 dq = dqkv[:, :, : ctx.num_heads_q]\n",
+      "col_offset": 16,
+      "end_col_offset": 73,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 223,
+      "line_range": [
+        223
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "281         batch, seqlen, two, nheads, headdim = kv.shape\n282         assert two == 2\n283         k = kv[:, :, 0]\n",
+      "col_offset": 8,
+      "end_col_offset": 23,
+      "filename": "./flash_attn/layers/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 282,
+      "line_range": [
+        282
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "167             labels = F.pad(labels, (0, 1))[..., :-1]\n168             assert labels.data_ptr() % 16 == 0\n169         assert logit_scale > 0.0\n",
+      "col_offset": 12,
+      "end_col_offset": 46,
+      "filename": "./flash_attn/ops/triton/cross_entropy.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 168,
+      "line_range": [
+        168
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "168             assert labels.data_ptr() % 16 == 0\n169         assert logit_scale > 0.0\n170         n_rows, n_cols = logits.shape\n",
+      "col_offset": 8,
+      "end_col_offset": 32,
+      "filename": "./flash_attn/ops/triton/cross_entropy.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 169,
+      "line_range": [
+        169
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "170         n_rows, n_cols = logits.shape\n171         assert labels.shape == (n_rows,)\n172         world_size = 1 if process_group is None else torch.distributed.get_world_size(process_group)\n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./flash_attn/ops/triton/cross_entropy.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 171,
+      "line_range": [
+        171
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "188         if use_precomputed_lse:\n189             assert precomputed_lse.shape == (n_rows,)\n190             lse = precomputed_lse.contiguous()\n",
+      "col_offset": 12,
+      "end_col_offset": 53,
+      "filename": "./flash_attn/ops/triton/cross_entropy.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 189,
+      "line_range": [
+        189
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "159     else:\n160         assert max_seqlen is not None, \"If cu_seqlens is passed in, then max_seqlen must be passed\"\n161         total_seqlen, nheads, headdim = x.shape\n",
+      "col_offset": 8,
+      "end_col_offset": 99,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 160,
+      "line_range": [
+        160
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "165     seqlen_ro, rotary_dim = cos.shape\n166     assert sin.shape == cos.shape\n167     rotary_dim *= 2\n",
+      "col_offset": 4,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 166,
+      "line_range": [
+        166
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "167     rotary_dim *= 2\n168     assert rotary_dim <= headdim, \"rotary_dim must be <= headdim\"\n169     assert headdim <= 256, \"Only support headdim <= 256\"\n",
+      "col_offset": 4,
+      "end_col_offset": 65,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 168,
+      "line_range": [
+        168
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "168     assert rotary_dim <= headdim, \"rotary_dim must be <= headdim\"\n169     assert headdim <= 256, \"Only support headdim <= 256\"\n170     assert seqlen_ro >= seqlen, \"seqlen_ro must be >= seqlen\"\n",
+      "col_offset": 4,
+      "end_col_offset": 56,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 169,
+      "line_range": [
+        169
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "169     assert headdim <= 256, \"Only support headdim <= 256\"\n170     assert seqlen_ro >= seqlen, \"seqlen_ro must be >= seqlen\"\n171 \n",
+      "col_offset": 4,
+      "end_col_offset": 61,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 170,
+      "line_range": [
+        170
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "171 \n172     assert (\n173         cos.dtype == sin.dtype\n174     ), f\"cos and sin must have the same dtype, got {cos.dtype} and {sin.dtype}\"\n175     assert (\n",
+      "col_offset": 4,
+      "end_col_offset": 79,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 172,
+      "line_range": [
+        172,
+        173,
+        174
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "174     ), f\"cos and sin must have the same dtype, got {cos.dtype} and {sin.dtype}\"\n175     assert (\n176         x.dtype == cos.dtype\n177     ), f\"Input and cos/sin must have the same dtype, got {x.dtype} and {cos.dtype}\"\n178 \n",
+      "col_offset": 4,
+      "end_col_offset": 83,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 175,
+      "line_range": [
+        175,
+        176,
+        177
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "180     if isinstance(seqlen_offsets, torch.Tensor):\n181         assert seqlen_offsets.shape == (batch,)\n182         assert seqlen_offsets.dtype in [torch.int32, torch.int64]\n",
+      "col_offset": 8,
+      "end_col_offset": 47,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 181,
+      "line_range": [
+        181
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "181         assert seqlen_offsets.shape == (batch,)\n182         assert seqlen_offsets.dtype in [torch.int32, torch.int64]\n183         seqlen_offsets = seqlen_offsets.contiguous()\n",
+      "col_offset": 8,
+      "end_col_offset": 65,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 182,
+      "line_range": [
+        182
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "184     else:\n185         assert seqlen_offsets + seqlen <= seqlen_ro\n186 \n",
+      "col_offset": 8,
+      "end_col_offset": 51,
+      "filename": "./flash_attn/ops/triton/rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 185,
+      "line_range": [
+        185
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

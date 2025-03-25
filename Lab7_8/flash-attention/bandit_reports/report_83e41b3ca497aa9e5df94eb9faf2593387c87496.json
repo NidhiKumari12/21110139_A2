@@ -1,0 +1,94 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T20:02:19Z",
+  "metrics": {
+    "./flash_attn/flash_attn_interface.py": {
+      "CONFIDENCE.HIGH": 3,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 3,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1499,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 3,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 3,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1499,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "24     # This should match the block sizes in the CUDA kernel\n25     assert head_dim <= 256\n26     major, minor = torch.cuda.get_device_capability(device)\n",
+      "col_offset": 4,
+      "end_col_offset": 26,
+      "filename": "./flash_attn/flash_attn_interface.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 25,
+      "line_range": [
+        25
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1576     \"\"\"\n1577     assert k_cache.stride(-1) == 1, \"k_cache must have contiguous last dimension\"\n1578     assert v_cache.stride(-1) == 1, \"v_cache must have contiguous last dimension\"\n",
+      "col_offset": 4,
+      "end_col_offset": 81,
+      "filename": "./flash_attn/flash_attn_interface.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1577,
+      "line_range": [
+        1577
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1577     assert k_cache.stride(-1) == 1, \"k_cache must have contiguous last dimension\"\n1578     assert v_cache.stride(-1) == 1, \"v_cache must have contiguous last dimension\"\n1579     q, k, v = [maybe_contiguous(x) for x in (q, k, v)]\n",
+      "col_offset": 4,
+      "end_col_offset": 81,
+      "filename": "./flash_attn/flash_attn_interface.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1578,
+      "line_range": [
+        1578
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

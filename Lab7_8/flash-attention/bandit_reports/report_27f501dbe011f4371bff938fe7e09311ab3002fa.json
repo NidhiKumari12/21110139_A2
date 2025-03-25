@@ -1,0 +1,1094 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T20:01:57Z",
+  "metrics": {
+    "./flash_attn/ops/triton/layer_norm.py": {
+      "CONFIDENCE.HIGH": 53,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 53,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1039,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 53,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 53,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1039,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "57     if x1 is not None:\n58         assert rowscale is None, \"rowscale is not supported with parallel LayerNorm\"\n59     if rowscale is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 84,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 58,
+      "line_range": [
+        58
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "112     if x1 is not None:\n113         assert rowscale is None, \"rowscale is not supported with parallel LayerNorm\"\n114     if rowscale is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 84,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 113,
+      "line_range": [
+        113
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "281     M, N = x.shape\n282     assert x.stride(-1) == 1\n283     if residual is not None:\n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 282,
+      "line_range": [
+        282
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "283     if residual is not None:\n284         assert residual.stride(-1) == 1\n285         assert residual.shape == (M, N)\n",
+      "col_offset": 8,
+      "end_col_offset": 39,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 284,
+      "line_range": [
+        284
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "284         assert residual.stride(-1) == 1\n285         assert residual.shape == (M, N)\n286     assert weight.shape == (N,)\n",
+      "col_offset": 8,
+      "end_col_offset": 39,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 285,
+      "line_range": [
+        285
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "285         assert residual.shape == (M, N)\n286     assert weight.shape == (N,)\n287     assert weight.stride(-1) == 1\n",
+      "col_offset": 4,
+      "end_col_offset": 31,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 286,
+      "line_range": [
+        286
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "286     assert weight.shape == (N,)\n287     assert weight.stride(-1) == 1\n288     if bias is not None:\n",
+      "col_offset": 4,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 287,
+      "line_range": [
+        287
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "288     if bias is not None:\n289         assert bias.stride(-1) == 1\n290         assert bias.shape == (N,)\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 289,
+      "line_range": [
+        289
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "289         assert bias.stride(-1) == 1\n290         assert bias.shape == (N,)\n291     if x1 is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 290,
+      "line_range": [
+        290
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "291     if x1 is not None:\n292         assert x1.shape == x.shape\n293         assert rowscale is None\n",
+      "col_offset": 8,
+      "end_col_offset": 34,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 292,
+      "line_range": [
+        292
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "292         assert x1.shape == x.shape\n293         assert rowscale is None\n294         assert x1.stride(-1) == 1\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 293,
+      "line_range": [
+        293
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "293         assert rowscale is None\n294         assert x1.stride(-1) == 1\n295     if weight1 is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 294,
+      "line_range": [
+        294
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "295     if weight1 is not None:\n296         assert weight1.shape == (N,)\n297         assert weight1.stride(-1) == 1\n",
+      "col_offset": 8,
+      "end_col_offset": 36,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 296,
+      "line_range": [
+        296
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "296         assert weight1.shape == (N,)\n297         assert weight1.stride(-1) == 1\n298     if bias1 is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 38,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 297,
+      "line_range": [
+        297
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "298     if bias1 is not None:\n299         assert bias1.shape == (N,)\n300         assert bias1.stride(-1) == 1\n",
+      "col_offset": 8,
+      "end_col_offset": 34,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 299,
+      "line_range": [
+        299
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "299         assert bias1.shape == (N,)\n300         assert bias1.stride(-1) == 1\n301     if rowscale is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 36,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 300,
+      "line_range": [
+        300
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "301     if rowscale is not None:\n302         assert rowscale.is_contiguous()\n303         assert rowscale.shape == (M,)\n",
+      "col_offset": 8,
+      "end_col_offset": 39,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 302,
+      "line_range": [
+        302
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "302         assert rowscale.is_contiguous()\n303         assert rowscale.shape == (M,)\n304     # allocate output\n",
+      "col_offset": 8,
+      "end_col_offset": 37,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 303,
+      "line_range": [
+        303
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "307     else:\n308         assert out.shape == x.shape\n309     assert out.stride(-1) == 1\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 308,
+      "line_range": [
+        308
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "308         assert out.shape == x.shape\n309     assert out.stride(-1) == 1\n310     if weight1 is not None:\n",
+      "col_offset": 4,
+      "end_col_offset": 30,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 309,
+      "line_range": [
+        309
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "311         y1 = torch.empty_like(out)\n312         assert y1.stride(-1) == 1\n313     else:\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 312,
+      "line_range": [
+        312
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "326         else:\n327             assert residual_out.shape == x.shape\n328         assert residual_out.stride(-1) == 1\n",
+      "col_offset": 12,
+      "end_col_offset": 48,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 327,
+      "line_range": [
+        327
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "327             assert residual_out.shape == x.shape\n328         assert residual_out.stride(-1) == 1\n329     else:\n",
+      "col_offset": 8,
+      "end_col_offset": 43,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 328,
+      "line_range": [
+        328
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "588     M, N = x.shape\n589     assert x.stride(-1) == 1\n590     assert dy.stride(-1) == 1\n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 589,
+      "line_range": [
+        589
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "589     assert x.stride(-1) == 1\n590     assert dy.stride(-1) == 1\n591     assert dy.shape == (M, N)\n",
+      "col_offset": 4,
+      "end_col_offset": 29,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 590,
+      "line_range": [
+        590
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "590     assert dy.stride(-1) == 1\n591     assert dy.shape == (M, N)\n592     if dresidual is not None:\n",
+      "col_offset": 4,
+      "end_col_offset": 29,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 591,
+      "line_range": [
+        591
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "592     if dresidual is not None:\n593         assert dresidual.stride(-1) == 1\n594         assert dresidual.shape == (M, N)\n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 593,
+      "line_range": [
+        593
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "593         assert dresidual.stride(-1) == 1\n594         assert dresidual.shape == (M, N)\n595     assert weight.shape == (N,)\n",
+      "col_offset": 8,
+      "end_col_offset": 40,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 594,
+      "line_range": [
+        594
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "594         assert dresidual.shape == (M, N)\n595     assert weight.shape == (N,)\n596     assert weight.stride(-1) == 1\n",
+      "col_offset": 4,
+      "end_col_offset": 31,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 595,
+      "line_range": [
+        595
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "595     assert weight.shape == (N,)\n596     assert weight.stride(-1) == 1\n597     if bias is not None:\n",
+      "col_offset": 4,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 596,
+      "line_range": [
+        596
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "597     if bias is not None:\n598         assert bias.stride(-1) == 1\n599         assert bias.shape == (N,)\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 598,
+      "line_range": [
+        598
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "598         assert bias.stride(-1) == 1\n599         assert bias.shape == (N,)\n600     if dy1 is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 599,
+      "line_range": [
+        599
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "600     if dy1 is not None:\n601         assert weight1 is not None\n602         assert dy1.shape == dy.shape\n",
+      "col_offset": 8,
+      "end_col_offset": 34,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 601,
+      "line_range": [
+        601
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "601         assert weight1 is not None\n602         assert dy1.shape == dy.shape\n603         assert dy1.stride(-1) == 1\n",
+      "col_offset": 8,
+      "end_col_offset": 36,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 602,
+      "line_range": [
+        602
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "602         assert dy1.shape == dy.shape\n603         assert dy1.stride(-1) == 1\n604     if weight1 is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 34,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 603,
+      "line_range": [
+        603
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "604     if weight1 is not None:\n605         assert weight1.shape == (N,)\n606         assert weight1.stride(-1) == 1\n",
+      "col_offset": 8,
+      "end_col_offset": 36,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 605,
+      "line_range": [
+        605
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "605         assert weight1.shape == (N,)\n606         assert weight1.stride(-1) == 1\n607     if bias1 is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 38,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 606,
+      "line_range": [
+        606
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "607     if bias1 is not None:\n608         assert bias1.shape == (N,)\n609         assert bias1.stride(-1) == 1\n",
+      "col_offset": 8,
+      "end_col_offset": 34,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 608,
+      "line_range": [
+        608
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "608         assert bias1.shape == (N,)\n609         assert bias1.stride(-1) == 1\n610     if seeds is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 36,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 609,
+      "line_range": [
+        609
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "610     if seeds is not None:\n611         assert seeds.is_contiguous()\n612         assert seeds.shape == (M if not has_x1 else M * 2,)\n",
+      "col_offset": 8,
+      "end_col_offset": 36,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 611,
+      "line_range": [
+        611
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "611         assert seeds.is_contiguous()\n612         assert seeds.shape == (M if not has_x1 else M * 2,)\n613     if rowscale is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 59,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 612,
+      "line_range": [
+        612
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "613     if rowscale is not None:\n614         assert rowscale.is_contiguous()\n615         assert rowscale.shape == (M,)\n",
+      "col_offset": 8,
+      "end_col_offset": 39,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 614,
+      "line_range": [
+        614
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "614         assert rowscale.is_contiguous()\n615         assert rowscale.shape == (M,)\n616     # allocate output\n",
+      "col_offset": 8,
+      "end_col_offset": 37,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 615,
+      "line_range": [
+        615
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "630     if recompute_output:\n631         assert weight1 is None, \"recompute_output is not supported with parallel LayerNorm\"\n632 \n",
+      "col_offset": 8,
+      "end_col_offset": 91,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 631,
+      "line_range": [
+        631
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "732         if residual is not None:\n733             assert residual.shape == x_shape_og\n734             residual = residual.reshape(-1, residual.shape[-1])\n",
+      "col_offset": 12,
+      "end_col_offset": 47,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 733,
+      "line_range": [
+        733
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "737         if x1 is not None:\n738             assert x1.shape == x_shape_og\n739             assert rowscale is None, \"rowscale is not supported with parallel LayerNorm\"\n",
+      "col_offset": 12,
+      "end_col_offset": 41,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 738,
+      "line_range": [
+        738
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "738             assert x1.shape == x_shape_og\n739             assert rowscale is None, \"rowscale is not supported with parallel LayerNorm\"\n740             x1 = x1.reshape(-1, x1.shape[-1])\n",
+      "col_offset": 12,
+      "end_col_offset": 88,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 739,
+      "line_range": [
+        739
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "818             dy = dy.contiguous()\n819         assert dy.shape == x.shape\n820         if weight1 is not None:\n",
+      "col_offset": 8,
+      "end_col_offset": 34,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 819,
+      "line_range": [
+        819
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "824                 dy1 = dy1.contiguous()\n825             assert dy1.shape == x.shape\n826         else:\n",
+      "col_offset": 12,
+      "end_col_offset": 39,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 825,
+      "line_range": [
+        825
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "832                 dresidual = dresidual.contiguous()\n833             assert dresidual.shape == x.shape\n834         else:\n",
+      "col_offset": 12,
+      "end_col_offset": 45,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 833,
+      "line_range": [
+        833
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1002         if residual is not None:\n1003             assert residual.shape == x_shape_og\n1004             residual = residual.reshape(-1, residual.shape[-1])\n",
+      "col_offset": 12,
+      "end_col_offset": 47,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1003,
+      "line_range": [
+        1003
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1049             dy = dy.contiguous()\n1050         assert dy.shape == x.shape\n1051         if ctx.prenorm:\n",
+      "col_offset": 8,
+      "end_col_offset": 34,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1050,
+      "line_range": [
+        1050
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1055                 dresidual = dresidual.contiguous()\n1056             assert dresidual.shape == x.shape\n1057         else:\n",
+      "col_offset": 12,
+      "end_col_offset": 45,
+      "filename": "./flash_attn/ops/triton/layer_norm.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1056,
+      "line_range": [
+        1056
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

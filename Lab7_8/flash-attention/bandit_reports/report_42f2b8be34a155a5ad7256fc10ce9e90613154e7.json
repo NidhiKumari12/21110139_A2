@@ -1,0 +1,320 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T20:02:17Z",
+  "metrics": {
+    "./setup.py": {
+      "CONFIDENCE.HIGH": 14,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 13,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 439,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 14,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 13,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 439,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "15 from setuptools import setup, find_packages\n16 import subprocess\n17 \n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 16,
+      "line_range": [
+        16
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "88 def get_cuda_bare_metal_version(cuda_dir):\n89     raw_output = subprocess.check_output([cuda_dir + \"/bin/nvcc\", \"-V\"], universal_newlines=True)\n90     output = raw_output.split()\n",
+      "col_offset": 17,
+      "end_col_offset": 97,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 89,
+      "line_range": [
+        89
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "137     # Validate if each element in archs is in allowed_archs\n138     assert all(\n139         arch in allowed_archs for arch in archs\n140     ), f\"One of GPU archs of {archs} is invalid or not supported by Flash-Attention\"\n141 \n",
+      "col_offset": 4,
+      "end_col_offset": 84,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 138,
+      "line_range": [
+        138,
+        139,
+        140
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "148 if os.path.isdir(\".git\"):\n149     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/composable_kernel\"], check=True)\n150     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/cutlass\"], check=True)\n",
+      "col_offset": 4,
+      "end_col_offset": 98,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 149,
+      "line_range": [
+        149
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "148 if os.path.isdir(\".git\"):\n149     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/composable_kernel\"], check=True)\n150     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/cutlass\"], check=True)\n",
+      "col_offset": 4,
+      "end_col_offset": 98,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 149,
+      "line_range": [
+        149
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "149     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/composable_kernel\"], check=True)\n150     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/cutlass\"], check=True)\n151 else:\n",
+      "col_offset": 4,
+      "end_col_offset": 88,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 150,
+      "line_range": [
+        150
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "149     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/composable_kernel\"], check=True)\n150     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/cutlass\"], check=True)\n151 else:\n",
+      "col_offset": 4,
+      "end_col_offset": 88,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 150,
+      "line_range": [
+        150
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "153         if not USE_TRITON_ROCM:\n154             assert (\n155                 os.path.exists(\"csrc/composable_kernel/example/ck_tile/01_fmha/generate.py\")\n156             ), \"csrc/composable_kernel is missing, please use source distribution or git clone\"\n157     else:\n",
+      "col_offset": 12,
+      "end_col_offset": 95,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 154,
+      "line_range": [
+        154,
+        155,
+        156
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "157     else:\n158         assert (\n159             os.path.exists(\"csrc/cutlass/include/cutlass/cutlass.h\")\n160         ), \"csrc/cutlass is missing, please use source distribution or git clone\"\n161 \n",
+      "col_offset": 8,
+      "end_col_offset": 81,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 158,
+      "line_range": [
+        158,
+        159,
+        160
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "334 \n335         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n336         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_appendkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n",
+      "col_offset": 8,
+      "end_col_offset": 157,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 335,
+      "line_range": [
+        335
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "335         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n336         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_appendkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n337         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_splitkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n",
+      "col_offset": 8,
+      "end_col_offset": 166,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 336,
+      "line_range": [
+        336
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "336         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_appendkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n337         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_splitkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n338         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"bwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n",
+      "col_offset": 8,
+      "end_col_offset": 165,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 337,
+      "line_range": [
+        337
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "337         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_splitkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n338         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"bwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n339 \n",
+      "col_offset": 8,
+      "end_col_offset": 157,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 338,
+      "line_range": [
+        338
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "485         try:\n486             urllib.request.urlretrieve(wheel_url, wheel_filename)\n487 \n",
+      "col_offset": 12,
+      "end_col_offset": 65,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 22,
+        "link": "https://cwe.mitre.org/data/definitions/22.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+      "line_number": 486,
+      "line_range": [
+        486
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+      "test_id": "B310",
+      "test_name": "blacklist"
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T20:02:22Z",
+  "metrics": {
+    "./tests/test_rotary.py": {
+      "CONFIDENCE.HIGH": 12,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 12,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 249,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 12,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 12,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 249,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "15 def generate_cos_sin(seqlen, rotary_dim, device, dtype):\n16     assert rotary_dim % 2 == 0\n17     angle = torch.rand(seqlen * 2, rotary_dim // 2, device=device) * 2 * math.pi\n",
+      "col_offset": 4,
+      "end_col_offset": 30,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 16,
+      "line_range": [
+        16
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "87     if not inplace:\n88         assert torch.equal(x, x_pt)\n89     # Numerical error if we just do any arithmetic\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 88,
+      "line_range": [
+        88
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "90     atol = ((out_pt + 0.3 - 0.3) - out_pt).abs().max().item()\n91     assert torch.allclose(out, out_pt, rtol=rtol, atol=2 * atol)\n92     atol = ((x_pt.grad + 0.3 - 0.3) - x_pt.grad).abs().max().item()\n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 91,
+      "line_range": [
+        91
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "92     atol = ((x_pt.grad + 0.3 - 0.3) - x_pt.grad).abs().max().item()\n93     assert torch.allclose(x.grad, x_pt.grad, rtol=rtol, atol=2 * atol)\n94 \n",
+      "col_offset": 4,
+      "end_col_offset": 70,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 93,
+      "line_range": [
+        93
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "157     atol = ((out_pt + 0.3 - 0.3) - out_pt).abs().max().item()\n158     assert torch.allclose(out, out_pt, rtol=rtol, atol=2 * atol)\n159     atol = ((qkv_pt.grad + 0.3 - 0.3) - qkv_pt.grad).abs().max().item()\n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 158,
+      "line_range": [
+        158
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "159     atol = ((qkv_pt.grad + 0.3 - 0.3) - qkv_pt.grad).abs().max().item()\n160     assert torch.allclose(qkv.grad, qkv_pt.grad, rtol=rtol, atol=2 * atol)\n161 \n",
+      "col_offset": 4,
+      "end_col_offset": 74,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 160,
+      "line_range": [
+        160
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "203     atol = ((out_pt + 0.3 - 0.3) - out_pt).abs().max().item()\n204     assert torch.allclose(out, out_pt, rtol=rtol, atol=2 * atol)\n205     atol = ((kv_pt.grad + 0.3 - 0.3) - kv_pt.grad).abs().max().item()\n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 204,
+      "line_range": [
+        204
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "205     atol = ((kv_pt.grad + 0.3 - 0.3) - kv_pt.grad).abs().max().item()\n206     assert torch.allclose(kv.grad, kv_pt.grad, rtol=rtol, atol=2 * atol)\n207 \n",
+      "col_offset": 4,
+      "end_col_offset": 72,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 206,
+      "line_range": [
+        206
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "264     if not inplace:\n265         assert torch.equal(x_unpad, x_unpad_clone)\n266     # Numerical error if we just do any arithmetic\n",
+      "col_offset": 8,
+      "end_col_offset": 50,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 265,
+      "line_range": [
+        265
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "267     atol = ((out_pt + 0.3 - 0.3) - out_pt).abs().max().item()\n268     assert torch.allclose(out, out_pt, rtol=rtol, atol=2 * atol)\n269     atol = ((x_pt.grad + 0.3 - 0.3) - x_pt.grad).abs().max().item()\n",
+      "col_offset": 4,
+      "end_col_offset": 64,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 268,
+      "line_range": [
+        268
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "269     atol = ((x_pt.grad + 0.3 - 0.3) - x_pt.grad).abs().max().item()\n270     assert torch.allclose(x_grad, x_pt.grad, rtol=rtol, atol=2 * atol)\n271 \n",
+      "col_offset": 4,
+      "end_col_offset": 70,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 270,
+      "line_range": [
+        270
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "304         #   * for the backward pass (conjugate=True)\n305         assert compilation_count == 2\n306     finally:\n",
+      "col_offset": 8,
+      "end_col_offset": 37,
+      "filename": "./tests/test_rotary.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 305,
+      "line_range": [
+        305
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}

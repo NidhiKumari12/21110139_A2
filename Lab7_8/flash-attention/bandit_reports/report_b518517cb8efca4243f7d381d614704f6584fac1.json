@@ -1,0 +1,2334 @@
+{
+  "errors": [],
+  "generated_at": "2025-03-25T20:02:15Z",
+  "metrics": {
+    "./flash_attn/flash_attn_interface.py": {
+      "CONFIDENCE.HIGH": 3,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 3,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1499,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/bench.py": {
+      "CONFIDENCE.HIGH": 3,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 3,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 254,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/bwd_prefill.py": {
+      "CONFIDENCE.HIGH": 6,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 6,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 583,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/bwd_ref.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 260,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/fwd_decode.py": {
+      "CONFIDENCE.HIGH": 5,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 5,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 552,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/fwd_prefill.py": {
+      "CONFIDENCE.HIGH": 1,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 1,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 463,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/fwd_ref.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 246,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/interface_fa.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 484,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/interface_torch.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 89,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/test.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 596,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./flash_attn/flash_attn_triton_amd/utils.py": {
+      "CONFIDENCE.HIGH": 34,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 34,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 218,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./setup.py": {
+      "CONFIDENCE.HIGH": 14,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 13,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 439,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "./tests/test_flash_attn_triton_amd.py": {
+      "CONFIDENCE.HIGH": 40,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 40,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 1878,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "_totals": {
+      "CONFIDENCE.HIGH": 106,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 105,
+      "SEVERITY.MEDIUM": 1,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 7561,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": [
+    {
+      "code": "24     # This should match the block sizes in the CUDA kernel\n25     assert head_dim <= 256\n26     major, minor = torch.cuda.get_device_capability(device)\n",
+      "col_offset": 4,
+      "end_col_offset": 26,
+      "filename": "./flash_attn/flash_attn_interface.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 25,
+      "line_range": [
+        25
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1576     \"\"\"\n1577     assert k_cache.stride(-1) == 1, \"k_cache must have contiguous last dimension\"\n1578     assert v_cache.stride(-1) == 1, \"v_cache must have contiguous last dimension\"\n",
+      "col_offset": 4,
+      "end_col_offset": 81,
+      "filename": "./flash_attn/flash_attn_interface.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1577,
+      "line_range": [
+        1577
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1577     assert k_cache.stride(-1) == 1, \"k_cache must have contiguous last dimension\"\n1578     assert v_cache.stride(-1) == 1, \"v_cache must have contiguous last dimension\"\n1579     q, k, v = [maybe_contiguous(x) for x in (q, k, v)]\n",
+      "col_offset": 4,
+      "end_col_offset": 81,
+      "filename": "./flash_attn/flash_attn_interface.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1578,
+      "line_range": [
+        1578
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "260     # Validate arguments\n261     assert (\n262         args.layout == \"thd\" or not args.equal_seqlens\n263     ), \"Equal sequence lengths arg must be used with the thd layout.\"\n264     args.custom_config = False\n",
+      "col_offset": 4,
+      "end_col_offset": 69,
+      "filename": "./flash_attn/flash_attn_triton_amd/bench.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 261,
+      "line_range": [
+        261,
+        262,
+        263
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "266         args.custom_config = True\n267         assert args.b and args.hq and args.sq and args.d, (\n268             \"If custom config is specified, please provide all of batch, \"\n269             \"number of Q heads, Q sequence length, and head size.\"\n270         )\n271     assert args.dtype in ARGS_TO_TORCH_DTYPE, \"Only fp16, bf16 and fp32 types currently supported.\"\n",
+      "col_offset": 8,
+      "end_col_offset": 9,
+      "filename": "./flash_attn/flash_attn_triton_amd/bench.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 267,
+      "line_range": [
+        267,
+        268,
+        269,
+        270
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "270         )\n271     assert args.dtype in ARGS_TO_TORCH_DTYPE, \"Only fp16, bf16 and fp32 types currently supported.\"\n272 \n",
+      "col_offset": 4,
+      "end_col_offset": 99,
+      "filename": "./flash_attn/flash_attn_triton_amd/bench.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 271,
+      "line_range": [
+        271
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "557     # assert contigious\n558     assert do.is_contiguous()\n559     assert q.is_contiguous()\n",
+      "col_offset": 4,
+      "end_col_offset": 29,
+      "filename": "./flash_attn/flash_attn_triton_amd/bwd_prefill.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 558,
+      "line_range": [
+        558
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "558     assert do.is_contiguous()\n559     assert q.is_contiguous()\n560     assert k.is_contiguous()\n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./flash_attn/flash_attn_triton_amd/bwd_prefill.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 559,
+      "line_range": [
+        559
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "559     assert q.is_contiguous()\n560     assert k.is_contiguous()\n561     assert v.is_contiguous()\n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./flash_attn/flash_attn_triton_amd/bwd_prefill.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 560,
+      "line_range": [
+        560
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "560     assert k.is_contiguous()\n561     assert v.is_contiguous()\n562     assert o.is_contiguous()\n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./flash_attn/flash_attn_triton_amd/bwd_prefill.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 561,
+      "line_range": [
+        561
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "561     assert v.is_contiguous()\n562     assert o.is_contiguous()\n563     assert softmax_lse.is_contiguous()\n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./flash_attn/flash_attn_triton_amd/bwd_prefill.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 562,
+      "line_range": [
+        562
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "562     assert o.is_contiguous()\n563     assert softmax_lse.is_contiguous()\n564 \n",
+      "col_offset": 4,
+      "end_col_offset": 38,
+      "filename": "./flash_attn/flash_attn_triton_amd/bwd_prefill.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 563,
+      "line_range": [
+        563
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "571         raise ValueError(\"Layout not given\")\n572     assert layout == \"bsghd\"\n573 \n",
+      "col_offset": 4,
+      "end_col_offset": 28,
+      "filename": "./flash_attn/flash_attn_triton_amd/fwd_decode.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 572,
+      "line_range": [
+        572
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "578 \n579     assert dim_q == dim_k == dim_v, f\"Dimensions must match: {dim_q}, {dim_k}, {dim_v}\"\n580 \n",
+      "col_offset": 4,
+      "end_col_offset": 87,
+      "filename": "./flash_attn/flash_attn_triton_amd/fwd_decode.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 579,
+      "line_range": [
+        579
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "591 \n592     assert dim_k == dim_q, f\"Keys have head dim {dim_k} but queries have head dim {dim_q}\"\n593 \n",
+      "col_offset": 4,
+      "end_col_offset": 90,
+      "filename": "./flash_attn/flash_attn_triton_amd/fwd_decode.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 592,
+      "line_range": [
+        592
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "662         k_block_num = 2\n663     assert dim_padded % k_block_num == 0\n664     k_block_size = dim_padded // k_block_num\n",
+      "col_offset": 4,
+      "end_col_offset": 40,
+      "filename": "./flash_attn/flash_attn_triton_amd/fwd_decode.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 663,
+      "line_range": [
+        663
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "689         # BMGHK -> BMHK\n690         assert n_group_q == 1\n691         out = out[:, :, 0]\n",
+      "col_offset": 8,
+      "end_col_offset": 29,
+      "filename": "./flash_attn/flash_attn_triton_amd/fwd_decode.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 690,
+      "line_range": [
+        690
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "582     if (bias is not None):\n583         assert (bias.numel() < 2**31)\n584 \n",
+      "col_offset": 8,
+      "end_col_offset": 37,
+      "filename": "./flash_attn/flash_attn_triton_amd/fwd_prefill.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 583,
+      "line_range": [
+        583
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "63         # Without \"varlen\", there should still be one sequence.\n64         assert len(cu_seqlens_q) >= 2\n65         assert len(cu_seqlens_q) == len(cu_seqlens_k)\n",
+      "col_offset": 8,
+      "end_col_offset": 37,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 64,
+      "line_range": [
+        64
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "64         assert len(cu_seqlens_q) >= 2\n65         assert len(cu_seqlens_q) == len(cu_seqlens_k)\n66         self.num_contexts = len(cu_seqlens_q) - 1\n",
+      "col_offset": 8,
+      "end_col_offset": 53,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 65,
+      "line_range": [
+        65
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "71     def need_bias(self, bias, batch, nheads, seqlen_q, seqlen_k):\n72         assert bias.is_cuda\n73         assert bias.dim() == 4\n",
+      "col_offset": 8,
+      "end_col_offset": 27,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 72,
+      "line_range": [
+        72
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "72         assert bias.is_cuda\n73         assert bias.dim() == 4\n74         assert bias.shape[0] == 1\n",
+      "col_offset": 8,
+      "end_col_offset": 30,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 73,
+      "line_range": [
+        73
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "73         assert bias.dim() == 4\n74         assert bias.shape[0] == 1\n75         assert bias.shape[2:] == (seqlen_q, seqlen_k)\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 74,
+      "line_range": [
+        74
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "74         assert bias.shape[0] == 1\n75         assert bias.shape[2:] == (seqlen_q, seqlen_k)\n76         self.bias = bias\n",
+      "col_offset": 8,
+      "end_col_offset": 53,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 75,
+      "line_range": [
+        75
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "78     def need_alibi(self, alibi_slopes, batch, nheads):\n79         assert alibi_slopes.is_cuda\n80         assert alibi_slopes.dim() == 2\n",
+      "col_offset": 8,
+      "end_col_offset": 35,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 79,
+      "line_range": [
+        79
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "79         assert alibi_slopes.is_cuda\n80         assert alibi_slopes.dim() == 2\n81         assert alibi_slopes.shape[0] == batch\n",
+      "col_offset": 8,
+      "end_col_offset": 38,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 80,
+      "line_range": [
+        80
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "80         assert alibi_slopes.dim() == 2\n81         assert alibi_slopes.shape[0] == batch\n82         assert alibi_slopes.shape[1] == nheads\n",
+      "col_offset": 8,
+      "end_col_offset": 45,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 81,
+      "line_range": [
+        81
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "81         assert alibi_slopes.shape[0] == batch\n82         assert alibi_slopes.shape[1] == nheads\n83         self.alibi_slopes = alibi_slopes\n",
+      "col_offset": 8,
+      "end_col_offset": 46,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 82,
+      "line_range": [
+        82
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "92     def check_args(self, q, k, v, o):\n93         assert q.dim() == k.dim() and q.dim() == v.dim()\n94 \n",
+      "col_offset": 8,
+      "end_col_offset": 56,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 93,
+      "line_range": [
+        93
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "96         if self.varlen:\n97             assert q.dim() == 3\n98             assert self.cu_seqlens_q is not None\n",
+      "col_offset": 12,
+      "end_col_offset": 31,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 97,
+      "line_range": [
+        97
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "97             assert q.dim() == 3\n98             assert self.cu_seqlens_q is not None\n99             assert self.cu_seqlens_k is not None\n",
+      "col_offset": 12,
+      "end_col_offset": 48,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 98,
+      "line_range": [
+        98
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "98             assert self.cu_seqlens_q is not None\n99             assert self.cu_seqlens_k is not None\n100             assert len(self.cu_seqlens_q) == len(self.cu_seqlens_k)\n",
+      "col_offset": 12,
+      "end_col_offset": 48,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 99,
+      "line_range": [
+        99
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "99             assert self.cu_seqlens_k is not None\n100             assert len(self.cu_seqlens_q) == len(self.cu_seqlens_k)\n101             # TODO: Remove once bias is supported with varlen\n",
+      "col_offset": 12,
+      "end_col_offset": 67,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 100,
+      "line_range": [
+        100
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "101             # TODO: Remove once bias is supported with varlen\n102             assert self.bias is None\n103             # TODO:Remove once dropout is supported with varlen\n",
+      "col_offset": 12,
+      "end_col_offset": 36,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 102,
+      "line_range": [
+        102
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "103             # TODO:Remove once dropout is supported with varlen\n104             assert self.dropout_p == 0.0\n105             # assert not self.return_scores\n",
+      "col_offset": 12,
+      "end_col_offset": 40,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 104,
+      "line_range": [
+        104
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "106         else:\n107             assert q.dim() == 4\n108             assert self.max_seqlens_q > 0 and self.max_seqlens_k > 0\n",
+      "col_offset": 12,
+      "end_col_offset": 31,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 107,
+      "line_range": [
+        107
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "107             assert q.dim() == 4\n108             assert self.max_seqlens_q > 0 and self.max_seqlens_k > 0\n109             assert self.cu_seqlens_q is None and self.cu_seqlens_k is None\n",
+      "col_offset": 12,
+      "end_col_offset": 68,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 108,
+      "line_range": [
+        108
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "108             assert self.max_seqlens_q > 0 and self.max_seqlens_k > 0\n109             assert self.cu_seqlens_q is None and self.cu_seqlens_k is None\n110         assert k.shape == v.shape\n",
+      "col_offset": 12,
+      "end_col_offset": 74,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 109,
+      "line_range": [
+        109
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "109             assert self.cu_seqlens_q is None and self.cu_seqlens_k is None\n110         assert k.shape == v.shape\n111         assert q.shape[-1] == k.shape[-1] and q.shape[-1] == v.shape[-1]\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 110,
+      "line_range": [
+        110
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "110         assert k.shape == v.shape\n111         assert q.shape[-1] == k.shape[-1] and q.shape[-1] == v.shape[-1]\n112         # TODO: Change assert if we support qkl f8 and v f16\n",
+      "col_offset": 8,
+      "end_col_offset": 72,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 111,
+      "line_range": [
+        111
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "112         # TODO: Change assert if we support qkl f8 and v f16\n113         assert q.dtype == k.dtype and q.dtype == v.dtype\n114         assert head_size <= 256\n",
+      "col_offset": 8,
+      "end_col_offset": 56,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 113,
+      "line_range": [
+        113
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "113         assert q.dtype == k.dtype and q.dtype == v.dtype\n114         assert head_size <= 256\n115         assert o.shape == q.shape\n",
+      "col_offset": 8,
+      "end_col_offset": 31,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 114,
+      "line_range": [
+        114
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "114         assert head_size <= 256\n115         assert o.shape == q.shape\n116         assert (nheads_q % nheads_k) == 0\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 115,
+      "line_range": [
+        115
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "115         assert o.shape == q.shape\n116         assert (nheads_q % nheads_k) == 0\n117         assert self.layout is not None\n",
+      "col_offset": 8,
+      "end_col_offset": 41,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 116,
+      "line_range": [
+        116
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "116         assert (nheads_q % nheads_k) == 0\n117         assert self.layout is not None\n118         assert self.layout == 'thd' or not self.varlen\n",
+      "col_offset": 8,
+      "end_col_offset": 38,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 117,
+      "line_range": [
+        117
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "117         assert self.layout is not None\n118         assert self.layout == 'thd' or not self.varlen\n119 \n",
+      "col_offset": 8,
+      "end_col_offset": 54,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 118,
+      "line_range": [
+        118
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "130     else:\n131         assert False, f'Got unsupported tensor layout: {layout}'\n132 \n",
+      "col_offset": 8,
+      "end_col_offset": 64,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 131,
+      "line_range": [
+        131
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "212     else:\n213         assert False, \"Got unsupported layout.\"\n214     \n",
+      "col_offset": 8,
+      "end_col_offset": 47,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 213,
+      "line_range": [
+        213
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "215     # assert\n216     assert batch_q == batch_k\n217     assert head_size_q == head_size_k\n",
+      "col_offset": 4,
+      "end_col_offset": 29,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 216,
+      "line_range": [
+        216
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "216     assert batch_q == batch_k\n217     assert head_size_q == head_size_k\n218 \n",
+      "col_offset": 4,
+      "end_col_offset": 37,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 217,
+      "line_range": [
+        217
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "237     else:\n238         assert False, 'Got unsupported layout.'\n239     return q_strides, k_strides, v_strides, o_strides\n",
+      "col_offset": 8,
+      "end_col_offset": 47,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 238,
+      "line_range": [
+        238
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "253 \n254     assert x.ndim == len(stride_names)\n255     return {f\"stride_{s}\": x.stride(i) for i, s in enumerate(stride_names)}\n",
+      "col_offset": 4,
+      "end_col_offset": 38,
+      "filename": "./flash_attn/flash_attn_triton_amd/utils.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 254,
+      "line_range": [
+        254
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "15 from setuptools import setup, find_packages\n16 import subprocess\n17 \n",
+      "col_offset": 0,
+      "end_col_offset": 17,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Consider possible security implications associated with the subprocess module.",
+      "line_number": 16,
+      "line_range": [
+        16
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b404-import-subprocess",
+      "test_id": "B404",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "88 def get_cuda_bare_metal_version(cuda_dir):\n89     raw_output = subprocess.check_output([cuda_dir + \"/bin/nvcc\", \"-V\"], universal_newlines=True)\n90     output = raw_output.split()\n",
+      "col_offset": 17,
+      "end_col_offset": 97,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 89,
+      "line_range": [
+        89
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "137     # Validate if each element in archs is in allowed_archs\n138     assert all(\n139         arch in allowed_archs for arch in archs\n140     ), f\"One of GPU archs of {archs} is invalid or not supported by Flash-Attention\"\n141 \n",
+      "col_offset": 4,
+      "end_col_offset": 84,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 138,
+      "line_range": [
+        138,
+        139,
+        140
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "148 if os.path.isdir(\".git\"):\n149     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/composable_kernel\"], check=True)\n150     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/cutlass\"], check=True)\n",
+      "col_offset": 4,
+      "end_col_offset": 98,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 149,
+      "line_range": [
+        149
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "148 if os.path.isdir(\".git\"):\n149     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/composable_kernel\"], check=True)\n150     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/cutlass\"], check=True)\n",
+      "col_offset": 4,
+      "end_col_offset": 98,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 149,
+      "line_range": [
+        149
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "149     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/composable_kernel\"], check=True)\n150     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/cutlass\"], check=True)\n151 else:\n",
+      "col_offset": 4,
+      "end_col_offset": 88,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Starting a process with a partial executable path",
+      "line_number": 150,
+      "line_range": [
+        150
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b607_start_process_with_partial_path.html",
+      "test_id": "B607",
+      "test_name": "start_process_with_partial_path"
+    },
+    {
+      "code": "149     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/composable_kernel\"], check=True)\n150     subprocess.run([\"git\", \"submodule\", \"update\", \"--init\", \"csrc/cutlass\"], check=True)\n151 else:\n",
+      "col_offset": 4,
+      "end_col_offset": 88,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 150,
+      "line_range": [
+        150
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "153         if not USE_TRITON_ROCM:\n154             assert (\n155                 os.path.exists(\"csrc/composable_kernel/example/ck_tile/01_fmha/generate.py\")\n156             ), \"csrc/composable_kernel is missing, please use source distribution or git clone\"\n157     else:\n",
+      "col_offset": 12,
+      "end_col_offset": 95,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 154,
+      "line_range": [
+        154,
+        155,
+        156
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "157     else:\n158         assert (\n159             os.path.exists(\"csrc/cutlass/include/cutlass/cutlass.h\")\n160         ), \"csrc/cutlass is missing, please use source distribution or git clone\"\n161 \n",
+      "col_offset": 8,
+      "end_col_offset": 81,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 158,
+      "line_range": [
+        158,
+        159,
+        160
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "334 \n335         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n336         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_appendkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n",
+      "col_offset": 8,
+      "end_col_offset": 157,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 335,
+      "line_range": [
+        335
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "335         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n336         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_appendkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n337         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_splitkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n",
+      "col_offset": 8,
+      "end_col_offset": 166,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 336,
+      "line_range": [
+        336
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "336         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_appendkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n337         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_splitkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n338         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"bwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n",
+      "col_offset": 8,
+      "end_col_offset": 165,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 337,
+      "line_range": [
+        337
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "337         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"fwd_splitkv\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n338         subprocess.run([sys.executable, f\"{ck_dir}/example/ck_tile/01_fmha/generate.py\", \"-d\", \"bwd\", \"--output_dir\", \"build\", \"--receipt\", \"2\"], check=True)\n339 \n",
+      "col_offset": 8,
+      "end_col_offset": 157,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "subprocess call - check for execution of untrusted input.",
+      "line_number": 338,
+      "line_range": [
+        338
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b603_subprocess_without_shell_equals_true.html",
+      "test_id": "B603",
+      "test_name": "subprocess_without_shell_equals_true"
+    },
+    {
+      "code": "485         try:\n486             urllib.request.urlretrieve(wheel_url, wheel_filename)\n487 \n",
+      "col_offset": 12,
+      "end_col_offset": 65,
+      "filename": "./setup.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 22,
+        "link": "https://cwe.mitre.org/data/definitions/22.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+      "line_number": 486,
+      "line_range": [
+        486
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+      "test_id": "B310",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "66 def generate_random_padding_mask(max_seqlen, batch_size, device, mode=\"random\"):\n67     assert mode in [\"full\", \"random\", \"third\"]\n68     if mode == \"full\":\n",
+      "col_offset": 4,
+      "end_col_offset": 46,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 67,
+      "line_range": [
+        67
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "92     \"\"\"\n93     assert not (kvpacked and qkvpacked)\n94     batch_size, seqlen_q, nheads, d = q.shape\n",
+      "col_offset": 4,
+      "end_col_offset": 39,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 93,
+      "line_range": [
+        93
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "95     _, seqlen_k, nheads_k, _ = k.shape\n96     assert k.shape == (batch_size, seqlen_k, nheads_k, d)\n97     assert v.shape == (batch_size, seqlen_k, nheads_k, d)\n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 96,
+      "line_range": [
+        96
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "96     assert k.shape == (batch_size, seqlen_k, nheads_k, d)\n97     assert v.shape == (batch_size, seqlen_k, nheads_k, d)\n98 \n",
+      "col_offset": 4,
+      "end_col_offset": 57,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 97,
+      "line_range": [
+        97
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "125     if qkvpacked:\n126         assert (query_padding_mask == key_padding_mask).all()\n127         assert nheads == nheads_k\n",
+      "col_offset": 8,
+      "end_col_offset": 61,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 126,
+      "line_range": [
+        126
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "126         assert (query_padding_mask == key_padding_mask).all()\n127         assert nheads == nheads_k\n128         qkv_unpad = torch.stack([q_unpad, k_unpad, v_unpad], dim=1)\n",
+      "col_offset": 8,
+      "end_col_offset": 33,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 127,
+      "line_range": [
+        127
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "718     # of a Pytorch implementation.\n719     assert (out - out_ref).abs().max().item() <= 2 * (out_pt - out_ref).abs().max().item()\n720 \n",
+      "col_offset": 4,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 719,
+      "line_range": [
+        719
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "721     if dropout_p > 0.0:\n722         assert (attn - attn_ref).abs().max().item() <= 2 * (attn_pt - attn_ref).abs().max().item()\n723         # With alibi, many of the prob values are 0.0 & -0.0 so dropout_fraction isn't accurate\n",
+      "col_offset": 8,
+      "end_col_offset": 98,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 722,
+      "line_range": [
+        722
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "724         if not alibi:\n725             assert abs(dropout_fraction - dropout_p) <= (0.01 if not local else 0.025)\n726 \n",
+      "col_offset": 12,
+      "end_col_offset": 86,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 725,
+      "line_range": [
+        725
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "731     if (d <= MAX_HEADDIM_SM8x or dropout_p == 0) or (is_sm80 or is_sm90):\n732         assert (dqkv - dqkv_ref).abs().max().item() <= 2 * (dqkv_pt - dqkv_ref).abs().max().item()\n733 \n",
+      "col_offset": 8,
+      "end_col_offset": 98,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 732,
+      "line_range": [
+        732
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "876     # of a Pytorch implementation.\n877     assert (out - out_ref).abs().max().item() <= 2 * (out_pt - out_ref).abs().max().item()\n878 \n",
+      "col_offset": 4,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 877,
+      "line_range": [
+        877
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "879     if dropout_p > 0.0:\n880         assert (attn - attn_ref).abs().max().item() <= 2 * (attn_pt - attn_ref).abs().max().item()\n881         # With alibi, many of the prob values are 0.0 & -0.0 so dropout_fraction isn't accurate\n",
+      "col_offset": 8,
+      "end_col_offset": 98,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 880,
+      "line_range": [
+        880
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "882         if not alibi:\n883             assert abs(dropout_fraction - dropout_p) <= (0.01 if not local else 0.025)\n884 \n",
+      "col_offset": 12,
+      "end_col_offset": 86,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 883,
+      "line_range": [
+        883
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "885     if (d <= MAX_HEADDIM_SM8x or dropout_p == 0) or (is_sm80 or is_sm90):\n886         assert (dqkv - dqkv_ref).abs().max().item() <= 2 * (dqkv_pt - dqkv_ref).abs().max().item()\n887 \n",
+      "col_offset": 8,
+      "end_col_offset": 98,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 886,
+      "line_range": [
+        886
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "956     nheads_k = nheads if mha_type == \"mha\" else (1 if mha_type == \"mqa\" else 2)\n957     assert nheads % nheads_k == 0\n958     window_size = (-1, -1) if not local else torch.randint(0, seqlen_k, (2,))\n",
+      "col_offset": 4,
+      "end_col_offset": 33,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 957,
+      "line_range": [
+        957
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1165         print(\"out_ref:\", out_ref, out_ref.shape)\n1166     assert (out - out_ref).abs().max().item() <= 2 * (out_pt - out_ref).abs().max().item()\n1167 \n",
+      "col_offset": 4,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1166,
+      "line_range": [
+        1166
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1168     if dropout_p > 0.0:\n1169         assert (attn - attn_ref).abs().max().item() <= 2 * (attn_pt - attn_ref).abs().max().item()\n1170         # With alibi, many of the prob values are 0.0 & -0.0 so dropout_fraction isn't accurate\n",
+      "col_offset": 8,
+      "end_col_offset": 98,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1169,
+      "line_range": [
+        1169
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1171         if not alibi:\n1172             assert abs(dropout_fraction - dropout_p) <= (0.01 if not local else 0.025)\n1173 \n",
+      "col_offset": 12,
+      "end_col_offset": 86,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1172,
+      "line_range": [
+        1172
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1178             print(\"dv_pt:\", dv_pt, dv_pt.shape)\n1179         assert (dv - dv_ref).abs().max().item() <= 3 * (dv_pt - dv_ref).abs().max().item()\n1180         \n",
+      "col_offset": 8,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1179,
+      "line_range": [
+        1179
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1184             print(\"dk_pt:\", dk_pt, dk_pt.shape)\n1185         assert (dk - dk_ref).abs().max().item() <= 3 * (dk_pt - dk_ref).abs().max().item()\n1186 \n",
+      "col_offset": 8,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1185,
+      "line_range": [
+        1185
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1190             print(\"dq_pt:\", dq_pt, dq_pt.shape)\n1191         assert (dq - dq_ref).abs().max().item() <= 3 * (dq_pt - dq_ref).abs().max().item()\n1192         \n",
+      "col_offset": 8,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1191,
+      "line_range": [
+        1191
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1258     nheads_k = nheads if mha_type == \"mha\" else (1 if mha_type == \"mqa\" else 2)\n1259     assert nheads % nheads_k == 0\n1260     window_size = (-1, -1) if not local else torch.randint(0, seqlen_k, (2,))\n",
+      "col_offset": 4,
+      "end_col_offset": 33,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1259,
+      "line_range": [
+        1259
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1515     # of a Pytorch implementation.\n1516     assert (out - out_ref).abs().max().item() <= 2 * (out_pt - out_ref).abs().max().item()\n1517 \n",
+      "col_offset": 4,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1516,
+      "line_range": [
+        1516
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1518     if dropout_p > 0.0:\n1519         assert (attn - attn_ref).abs().max().item() <= 2 * (attn_pt - attn_ref).abs().max().item()\n1520         # With alibi, many of the prob values are 0.0 & -0.0 so dropout_fraction isn't accurate\n",
+      "col_offset": 8,
+      "end_col_offset": 98,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1519,
+      "line_range": [
+        1519
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1521         if not alibi:\n1522             assert abs(dropout_fraction - dropout_p) <= (0.01 if not local else 0.04)\n1523 \n",
+      "col_offset": 12,
+      "end_col_offset": 85,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1522,
+      "line_range": [
+        1522
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1528             print(\"dv_pt:\", dv_pt, dv_pt.shape)\n1529         assert (dv - dv_ref).abs().max().item() <= 3 * (dv_pt - dv_ref).abs().max().item()\n1530         \n",
+      "col_offset": 8,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1529,
+      "line_range": [
+        1529
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1534             print(\"dk_pt:\", dk_pt, dk_pt.shape)\n1535         assert (dk - dk_ref).abs().max().item() <= 3 * (dk_pt - dk_ref).abs().max().item()\n1536 \n",
+      "col_offset": 8,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1535,
+      "line_range": [
+        1535
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1540             print(\"dq_pt:\", dq_pt, dq_pt.shape)\n1541         assert (dq - dq_ref).abs().max().item() <= 3 * (dq_pt - dq_ref).abs().max().item()\n1542 \n",
+      "col_offset": 8,
+      "end_col_offset": 90,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1541,
+      "line_range": [
+        1541
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1646     # of a Pytorch implementation.\n1647     assert (out - out_ref).abs().max().item() <= 2 * (out_pt - out_ref).abs().max().item() + 1e-5\n1648 \n",
+      "col_offset": 4,
+      "end_col_offset": 97,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1647,
+      "line_range": [
+        1647
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1652         print(\"dv_pt:\", dv_pt, dv_pt.shape)\n1653     assert (dv - dv_ref).abs().max().item() <= 2 * (dv_pt - dv_ref).abs().max().item() + 1e-5\n1654     \n",
+      "col_offset": 4,
+      "end_col_offset": 93,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1653,
+      "line_range": [
+        1653
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1658         print(\"dk_pt:\", dk_pt, dk_pt.shape)\n1659     assert (dk - dk_ref).abs().max().item() <= 2 * (dk_pt - dk_ref).abs().max().item() + 1e-5\n1660 \n",
+      "col_offset": 4,
+      "end_col_offset": 93,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1659,
+      "line_range": [
+        1659
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1664         print(\"dq_pt:\", dq_pt, dq_pt.shape)\n1665     assert (dq - dq_ref).abs().max().item() <= 2 * (dq_pt - dq_ref).abs().max().item() + 1e-5\n1666 \n",
+      "col_offset": 4,
+      "end_col_offset": 93,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1665,
+      "line_range": [
+        1665
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1828     # of a Pytorch implementation.\n1829     assert (out - out_ref).abs().max().item() <= 2 * (out_pt - out_ref).abs().max().item() + 1e-5\n1830 \n",
+      "col_offset": 4,
+      "end_col_offset": 97,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1829,
+      "line_range": [
+        1829
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1831     if test_backward:\n1832         assert (dq - dq_ref).abs().max().item() <= 2 * (dq_pt - dq_ref).abs().max().item() + 1e-5\n1833         assert (dk - dk_ref).abs().max().item() <= 2 * (dk_pt - dk_ref).abs().max().item() + 1e-5\n",
+      "col_offset": 8,
+      "end_col_offset": 97,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1832,
+      "line_range": [
+        1832
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1832         assert (dq - dq_ref).abs().max().item() <= 2 * (dq_pt - dq_ref).abs().max().item() + 1e-5\n1833         assert (dk - dk_ref).abs().max().item() <= 2 * (dk_pt - dk_ref).abs().max().item() + 1e-5\n1834         assert (dv - dv_ref).abs().max().item() <= 2 * (dv_pt - dv_ref).abs().max().item() + 1e-5\n",
+      "col_offset": 8,
+      "end_col_offset": 97,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1833,
+      "line_range": [
+        1833
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1833         assert (dk - dk_ref).abs().max().item() <= 2 * (dk_pt - dk_ref).abs().max().item() + 1e-5\n1834         assert (dv - dv_ref).abs().max().item() <= 2 * (dv_pt - dv_ref).abs().max().item() + 1e-5\n1835 \n",
+      "col_offset": 8,
+      "end_col_offset": 97,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1834,
+      "line_range": [
+        1834
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "1932     nheads_k = nheads if mha_type == \"mha\" else (1 if mha_type == \"mqa\" else 3)\n1933     assert nheads % nheads_k == 0\n1934     window_size = (-1, -1) if not local else torch.randint(0, seqlen_k, (2,))\n",
+      "col_offset": 4,
+      "end_col_offset": 33,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 1933,
+      "line_range": [
+        1933
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "2127             )[:, :seqlen_k]\n2128         assert torch.allclose(k_cache_select, k_cache_ref, rtol=1e-3, atol=1e-3)\n2129         assert torch.equal(v_cache_select, v_cache_ref)\n",
+      "col_offset": 8,
+      "end_col_offset": 80,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 2128,
+      "line_range": [
+        2128
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "2128         assert torch.allclose(k_cache_select, k_cache_ref, rtol=1e-3, atol=1e-3)\n2129         assert torch.equal(v_cache_select, v_cache_ref)\n2130     mult = 3 if not alibi else 5\n",
+      "col_offset": 8,
+      "end_col_offset": 55,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 2129,
+      "line_range": [
+        2129
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    },
+    {
+      "code": "2130     mult = 3 if not alibi else 5\n2131     assert (out - out_ref).abs().max().item() <= mult * (out_pt - out_ref).abs().max().item() + 1e-5\n2132 \n",
+      "col_offset": 4,
+      "end_col_offset": 100,
+      "filename": "./tests/test_flash_attn_triton_amd.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 703,
+        "link": "https://cwe.mitre.org/data/definitions/703.html"
+      },
+      "issue_severity": "LOW",
+      "issue_text": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.",
+      "line_number": 2131,
+      "line_range": [
+        2131
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html",
+      "test_id": "B101",
+      "test_name": "assert_used"
+    }
+  ]
+}
