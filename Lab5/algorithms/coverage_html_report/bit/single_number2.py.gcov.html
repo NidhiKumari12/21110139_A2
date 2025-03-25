@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.lcov - bit/single_number2.py</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">bit</a> - single_number2.py<span style="font-size: 80%;"> (source / <a href="single_number2.py.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.lcov</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntry">6</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2025-02-27 10:46:26</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryLo">50.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : &quot;&quot;&quot;</a>
+<a name="2"><span class="lineNum">       2 </span>            : Given an array of integers, every element appears</a>
+<a name="3"><span class="lineNum">       3 </span>            : three times except for one, which appears exactly once.</a>
+<a name="4"><span class="lineNum">       4 </span>            : Find that single one.</a>
+<a name="5"><span class="lineNum">       5 </span>            : </a>
+<a name="6"><span class="lineNum">       6 </span>            : Note:</a>
+<a name="7"><span class="lineNum">       7 </span>            : Your algorithm should have a linear runtime complexity.</a>
+<a name="8"><span class="lineNum">       8 </span>            : Could you implement it without using extra memory?</a>
+<a name="9"><span class="lineNum">       9 </span>            : </a>
+<a name="10"><span class="lineNum">      10 </span>            : </a>
+<a name="11"><span class="lineNum">      11 </span>            : Solution:</a>
+<a name="12"><span class="lineNum">      12 </span>            : 32 bits for each integer.</a>
+<a name="13"><span class="lineNum">      13 </span>            : Consider 1 bit in it, the sum of each integer's corresponding bit</a>
+<a name="14"><span class="lineNum">      14 </span>            : (except for the single number)</a>
+<a name="15"><span class="lineNum">      15 </span>            : should be 0 if mod by 3. Hence, we sum the bits of all</a>
+<a name="16"><span class="lineNum">      16 </span>            : integers and mod by 3,</a>
+<a name="17"><span class="lineNum">      17 </span>            : the remaining should be the exact bit of the single number.</a>
+<a name="18"><span class="lineNum">      18 </span>            : In this way, you get the 32 bits of the single number.</a>
+<a name="19"><span class="lineNum">      19 </span>            : &quot;&quot;&quot;</a>
+<a name="20"><span class="lineNum">      20 </span>            : </a>
+<a name="21"><span class="lineNum">      21 </span>            : # Another awesome answer</a>
+<a name="22"><span class="lineNum">      22 </span><span class="lineCov">          1 : def single_number2(nums):</span></a>
+<a name="23"><span class="lineNum">      23 </span><span class="lineCov">          1 :     ones, twos = 0, 0</span></a>
+<a name="24"><span class="lineNum">      24 </span><span class="lineCov">          1 :     for i in range(len(nums)):</span></a>
+<a name="25"><span class="lineNum">      25 </span><span class="lineCov">          1 :         ones = (ones ^ nums[i]) &amp; ~twos</span></a>
+<a name="26"><span class="lineNum">      26 </span><span class="lineCov">          1 :         twos = (twos ^ nums[i]) &amp; ~ones</span></a>
+<a name="27"><span class="lineNum">      27 </span><span class="lineCov">          1 :     return ones</span></a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

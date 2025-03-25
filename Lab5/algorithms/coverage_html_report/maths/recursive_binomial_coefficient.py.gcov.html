@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.lcov - maths/recursive_binomial_coefficient.py</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">maths</a> - recursive_binomial_coefficient.py<span style="font-size: 80%;"> (source / <a href="recursive_binomial_coefficient.py.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.lcov</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2025-02-27 10:46:26</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span><span class="lineNoCov">          0 : def recursive_binomial_coefficient(n,k):</span></a>
+<a name="2"><span class="lineNum">       2 </span>            :     &quot;&quot;&quot;Calculates the binomial coefficient, C(n,k), with n&gt;=k using recursion</a>
+<a name="3"><span class="lineNum">       3 </span>            :     Time complexity is O(k), so can calculate fairly quickly for large values of k.</a>
+<a name="4"><span class="lineNum">       4 </span>            : </a>
+<a name="5"><span class="lineNum">       5 </span>            :     &gt;&gt;&gt; recursive_binomial_coefficient(5,0)</a>
+<a name="6"><span class="lineNum">       6 </span>            :     1</a>
+<a name="7"><span class="lineNum">       7 </span>            : </a>
+<a name="8"><span class="lineNum">       8 </span>            :     &gt;&gt;&gt; recursive_binomial_coefficient(8,2)</a>
+<a name="9"><span class="lineNum">       9 </span>            :     28</a>
+<a name="10"><span class="lineNum">      10 </span>            : </a>
+<a name="11"><span class="lineNum">      11 </span>            :     &gt;&gt;&gt; recursive_binomial_coefficient(500,300)</a>
+<a name="12"><span class="lineNum">      12 </span>            :     5054949849935535817667719165973249533761635252733275327088189563256013971725761702359997954491403585396607971745777019273390505201262259748208640</a>
+<a name="13"><span class="lineNum">      13 </span>            : </a>
+<a name="14"><span class="lineNum">      14 </span>            :     &quot;&quot;&quot;</a>
+<a name="15"><span class="lineNum">      15 </span>            : </a>
+<a name="16"><span class="lineNum">      16 </span><span class="lineNoCov">          0 :     if k&gt;n:</span></a>
+<a name="17"><span class="lineNum">      17 </span><span class="lineNoCov">          0 :         raise ValueError('Invalid Inputs, ensure that n &gt;= k')</span></a>
+<a name="18"><span class="lineNum">      18 </span>            :         #function is only defined for n&gt;=k</a>
+<a name="19"><span class="lineNum">      19 </span><span class="lineNoCov">          0 :     if k == 0 or n == k:</span></a>
+<a name="20"><span class="lineNum">      20 </span>            :         #C(n,0) = C(n,n) = 1, so this is our base case.</a>
+<a name="21"><span class="lineNum">      21 </span><span class="lineNoCov">          0 :         return 1</span></a>
+<a name="22"><span class="lineNum">      22 </span><span class="lineNoCov">          0 :     if k &gt; n/2:</span></a>
+<a name="23"><span class="lineNum">      23 </span>            :         #C(n,k) = C(n,n-k), so if n/2 is sufficiently small, we can reduce the problem size.</a>
+<a name="24"><span class="lineNum">      24 </span><span class="lineNoCov">          0 :         return recursive_binomial_coefficient(n,n-k)</span></a>
+<a name="25"><span class="lineNum">      25 </span>            :     #else, we know C(n,k) = (n/k)C(n-1,k-1), so we can use this to reduce our problem size.</a>
+<a name="26"><span class="lineNum">      26 </span><span class="lineNoCov">          0 :     return int((n/k)*recursive_binomial_coefficient(n-1,k-1))</span></a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

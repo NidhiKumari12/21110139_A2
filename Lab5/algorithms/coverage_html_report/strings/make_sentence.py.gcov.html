@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.lcov - strings/make_sentence.py</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">strings</a> - make_sentence.py<span style="font-size: 80%;"> (source / <a href="make_sentence.py.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.lcov</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">10</td>
+            <td class="headerCovTableEntryHi">90.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2025-02-27 10:46:26</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryLo">50.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : &quot;&quot;&quot;</a>
+<a name="2"><span class="lineNum">       2 </span>            : For a given string and dictionary, how many sentences can you make from the</a>
+<a name="3"><span class="lineNum">       3 </span>            : string, such that all the words are contained in the dictionary.</a>
+<a name="4"><span class="lineNum">       4 </span>            : </a>
+<a name="5"><span class="lineNum">       5 </span>            : eg: for given string -&gt; &quot;appletablet&quot;</a>
+<a name="6"><span class="lineNum">       6 </span>            : &quot;apple&quot;, &quot;tablet&quot;</a>
+<a name="7"><span class="lineNum">       7 </span>            : &quot;applet&quot;, &quot;able&quot;, &quot;t&quot;</a>
+<a name="8"><span class="lineNum">       8 </span>            : &quot;apple&quot;, &quot;table&quot;, &quot;t&quot;</a>
+<a name="9"><span class="lineNum">       9 </span>            : &quot;app&quot;, &quot;let&quot;, &quot;able&quot;, &quot;t&quot;</a>
+<a name="10"><span class="lineNum">      10 </span>            : </a>
+<a name="11"><span class="lineNum">      11 </span>            : &quot;applet&quot;, {app, let, apple, t, applet} =&gt; 3</a>
+<a name="12"><span class="lineNum">      12 </span>            : &quot;thing&quot;, {&quot;thing&quot;} -&gt; 1</a>
+<a name="13"><span class="lineNum">      13 </span>            : &quot;&quot;&quot;</a>
+<a name="14"><span class="lineNum">      14 </span>            : </a>
+<a name="15"><span class="lineNum">      15 </span><span class="lineCov">          1 : count = 0</span></a>
+<a name="16"><span class="lineNum">      16 </span>            : </a>
+<a name="17"><span class="lineNum">      17 </span>            : </a>
+<a name="18"><span class="lineNum">      18 </span><span class="lineCov">          1 : def make_sentence(str_piece, dictionaries):</span></a>
+<a name="19"><span class="lineNum">      19 </span>            :     global count</a>
+<a name="20"><span class="lineNum">      20 </span><span class="lineCov">          1 :     if len(str_piece) == 0:</span></a>
+<a name="21"><span class="lineNum">      21 </span><span class="lineNoCov">          0 :         return True</span></a>
+<a name="22"><span class="lineNum">      22 </span><span class="lineCov">          1 :     for i in range(0, len(str_piece)):</span></a>
+<a name="23"><span class="lineNum">      23 </span><span class="lineCov">          1 :         prefix, suffix = str_piece[0:i], str_piece[i:]</span></a>
+<a name="24"><span class="lineNum">      24 </span><span class="lineCov">          1 :         if prefix in dictionaries:</span></a>
+<a name="25"><span class="lineNum">      25 </span><span class="lineCov">          1 :             if suffix in dictionaries or make_sentence(suffix, dictionaries):</span></a>
+<a name="26"><span class="lineNum">      26 </span><span class="lineCov">          1 :                 count += 1</span></a>
+<a name="27"><span class="lineNum">      27 </span><span class="lineCov">          1 :     return True</span></a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
